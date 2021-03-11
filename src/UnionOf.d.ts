@@ -1,1 +1,5 @@
-export type UnionOf<T extends readonly unknown[]> = T[number];
+export type UnionOf<T> = T extends readonly unknown[]
+	? T[number]
+	: T extends object
+	? { [K in keyof T]: { [P in K]: T[P] } }[keyof T]
+	: never;
