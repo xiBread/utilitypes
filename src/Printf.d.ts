@@ -9,10 +9,10 @@ type Token<T> =
 	'o' extends T ? object : never;
 
 /**
- * Constructs a tuple type based on each print token found in `T`.
+ * Constructs a tuple type based on each print token found in `S`.
  */
-export type Printf<T> = T extends `${infer U}%${infer F}${infer R}`
+export type Printf<S extends string> = S extends `${infer T}%${infer F}${infer R}`
 	? [Token<F>, ...Printf<R>]
-	: T extends `${infer U}%${infer F}`
+	: S extends `${infer T}%${infer F}`
 	? [Token<F>]
 	: [];
