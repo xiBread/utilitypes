@@ -1,5 +1,4 @@
-import { ExtendSelf } from './__internal__';
-import { Primitive } from './Primitive';
+import { ExtendSelf, Primitive } from '../';
 
 type DeepReadonlyImpl<T> = T extends Primitive | ((...args: any[]) => unknown)
 	? T

@@ -1,4 +1,4 @@
-import type { ExtendSelf } from './__internal__';
+import type { ExtendSelf } from '../';
 
 type Without<T, U> = { [K in Exclude<keyof T, keyof U>]?: never };
 

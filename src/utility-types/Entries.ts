@@ -1,4 +1,4 @@
-import type { ExtendSelf } from './__internal__';
+import type { ExtendSelf } from '../';
 
 /* prettier-ignore */
 type EntryPairing<T> = T extends object

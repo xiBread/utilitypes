@@ -1,5 +1,4 @@
-import type { SplitBy } from '../';
-import type { Separators } from './__internal__';
+import type { Separators, SplitBy } from '../';
 
 type Inner<T extends unknown[], U> = T extends [`${infer F}`, ...infer R]
 	? F extends undefined
