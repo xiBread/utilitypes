@@ -20,5 +20,11 @@ type Tuple<T, N extends number> = {
 
 /**
  * Constructs a tuple type from `T` with a fixed length of `N`.
+ *
+ * @example
+ * ```ts
+ * type T0 = TupleOf<number, 3>;
+ * //	^ = type T0 = [number, number, number]
+ * ```
  */
 export type TupleOf<T, N extends number> = number extends N ? T[] : Tuple<T, N>;
