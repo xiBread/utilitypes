@@ -11,4 +11,7 @@ type DeepPartialImpl<T> = T extends Primitive
 	? { [K in keyof T]?: DeepPartialImpl<T[K]> }
 	: unknown;
 
+/**
+ * Constructs a type with all deeply nested properties of `T` set to optional.
+ */
 export type DeepPartial<T> = ExtendSelf<T, DeepPartialImpl<T>>;

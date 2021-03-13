@@ -15,6 +15,9 @@ type Join<T extends unknown[], U extends string, S extends string, D extends str
 	? `${F extends U ? D : F extends S ? `${D}${Lowercase<F>}` : F}${Join<R, U, S, D>}`
 	: '';
 
+/**
+ * Converts a string by delimiting each compound word in `S` by `U`.
+ */
 export type Delimited<S extends string, U extends string> = ExtendSelf<
 	S,
 	Join<Split<S, Separators | Characters>, Separators, Characters, U>

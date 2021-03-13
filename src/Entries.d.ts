@@ -18,4 +18,7 @@ type EntryPairing<T> = T extends object
 		]
 	: never;
 
+/**
+ * Constructs a tuple type from `T` whose entries are key-value pairs.
+ */
 export type Entries<T> = ExtendSelf<T, EntryPairing<T>>;
