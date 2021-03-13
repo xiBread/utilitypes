@@ -18,4 +18,7 @@ type Tuple<T, N extends number> = {
 		: never;
 }[N];
 
+/**
+ * Constructs a tuple type from `T` with a fixed length of `N`.
+ */
 export type TupleOf<T, N extends number> = number extends N ? T[] : Tuple<T, N>;

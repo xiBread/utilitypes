@@ -1,3 +1,6 @@
+/**
+ * Constructs a tuple type, including `U`, by splitting `S` by `U`.
+ */
 export type Split<S extends string, U extends string> = S extends ''
 	? []
 	: S extends `${infer F}${U}${infer R}`

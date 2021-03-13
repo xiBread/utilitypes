@@ -8,6 +8,9 @@ type Token<T> =
 	'b' extends T ? bigint :
 	'o' extends T ? object : never;
 
+/**
+ * Constructs a tuple type based on each print token found in `T`.
+ */
 export type Printf<T> = T extends `${infer U}%${infer F}${infer R}`
 	? [Token<F>, ...Printf<R>]
 	: T extends `${infer U}%${infer F}`
