@@ -1,5 +1,4 @@
-import type { Split } from '../';
-import type { ExtendSelf, Separators } from './__internal__';
+import type { ExtendSelf, Separators, Split } from '../';
 
 /* prettier-ignore */
 type Characters =

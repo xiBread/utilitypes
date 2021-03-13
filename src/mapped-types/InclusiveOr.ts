@@ -1,4 +1,4 @@
-import type { ExtendSelf } from './__internal__';
+import type { ExtendSelf } from '../';
 
 type IOR<T, U extends keyof T> = Pick<T, Exclude<keyof T, U>> &
 	{

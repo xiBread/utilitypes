@@ -1,4 +1,4 @@
-import type { Values } from './__internal__';
+import type { Values } from '../';
 
 /**
  * Constructs a type by picking `K` based on `U` from `T`.
