@@ -1,6 +1,5 @@
 export type { Assign } from './src/Assign';
 export type { CamelCase } from './src/CamelCase';
-export type { Complement } from './src/Complement';
 export type { ConstantCase } from './src/ConstantCase';
 export type { Delimited } from './src/Delimited';
 export type { DeepReadonly } from './src/DeepReadonly';
