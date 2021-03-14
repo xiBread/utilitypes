@@ -1,3 +1,6 @@
+export * from './CastAs';
+export * from './Concat';
+export * from './Deconstruct';
 export * from './Entries';
 export * from './Filter';
 export * from './Head';
