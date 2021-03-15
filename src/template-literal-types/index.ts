@@ -3,6 +3,7 @@ export * from './ConstantCase';
 export * from './Delimited';
 export * from './PascalCase';
 export * from './Path';
+export * from './PathParameters';
 export * from './Printf';
 export * from './Replace';
 export * from './Split';
