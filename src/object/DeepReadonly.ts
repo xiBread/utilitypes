@@ -1,4 +1,4 @@
-import { ExtendSelf, Primitive } from '../';
+import type { ExtendSelf, Primitive } from '../';
 
 type DeepReadonlyImpl<T> = T extends Primitive | ((...args: any[]) => unknown)
 	? T

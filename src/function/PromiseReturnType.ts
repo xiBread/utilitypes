@@ -1,4 +1,4 @@
-import { ExtendSelf } from '../';
+import type { ExtendSelf } from '../';
 
 type Resolved<T> = T extends Promise<infer U>
 	? {

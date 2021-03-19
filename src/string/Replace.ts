@@ -1,4 +1,4 @@
-import { CastAs } from '../';
+import type { CastAs } from '../';
 
 /**
  * Replaces all occurances of `U` in `S` with `V`.
