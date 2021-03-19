@@ -1,4 +1,4 @@
-import { Binary } from './';
+import type { Binary } from './';
 
 type Not<N> = N extends '0'
 	? '1'

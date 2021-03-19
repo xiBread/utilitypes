@@ -1,4 +1,4 @@
-import { Binary } from './';
+import type { Binary } from './';
 
 type And<X, Y> = [X, Y] extends ['0', '0'] | ['0', '1'] | ['1', '0']
 	? '0'

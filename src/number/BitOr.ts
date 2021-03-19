@@ -1,4 +1,4 @@
-import { Binary } from './';
+import type { Binary } from './';
 
 export type Or<X, Y> = [X, Y] extends ['0', '0']
 	? '0'

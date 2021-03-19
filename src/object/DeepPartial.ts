@@ -1,4 +1,4 @@
-import { ExtendSelf, Primitive } from '../';
+import type { ExtendSelf, Primitive } from '../';
 
 type DeepPartialImpl<T> = T extends Primitive
 	? Partial<T>
