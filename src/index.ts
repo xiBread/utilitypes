@@ -1,6 +1,10 @@
-export * from './mapped-types';
-export * from './template-literal-types';
-export * from './utility-types';
+export * from './aliases';
+export * from './array';
+export * from './function';
+export * from './number';
+export * from './object';
+export * from './string';
+export * from './utility';
 
 /**
  * @internal
