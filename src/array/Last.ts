@@ -1,3 +1,5 @@
+import type { Reverse } from './Reverse';
+
 /**
  * Constructs a type by picking the last element in tuple `T`.
  *
@@ -7,4 +9,4 @@
  * //	^ = type T0 = 5
  * ```
  */
-export type Last<T extends unknown[]> = T extends [infer U] ? U : T extends [infer F, ...infer R] ? Last<R> : never;
+export type Last<T extends unknown[]> = T extends [unknown, ...unknown[]] ? Reverse<T>['0'] : never;
