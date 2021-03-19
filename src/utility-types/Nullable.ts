@@ -1,4 +1,4 @@
 /**
- * Constructs a union type by including `null` and `undefined` to `T`.
+ * Constructs a union type by including `null` to `T`.
  */
-export type Nullable<T> = T | null | undefined;
+export type Nullable<T> = T | null;
