@@ -8,4 +8,5 @@ export * from './Printf';
 export * from './Replace';
 export * from './Split';
 export * from './SplitBy';
+export * from './StrictPath';
 export * from './Value';
