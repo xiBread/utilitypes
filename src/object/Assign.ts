@@ -1,4 +1,4 @@
-type Mapped<T> = { [K in keyof T]: T[K] };
+import type { Mapped } from '../';
 
 /**
  * Constructs a type with each property in `U` assigned to `T`.
