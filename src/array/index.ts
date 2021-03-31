@@ -4,6 +4,7 @@ export * from './Entries';
 export * from './Filter';
 export * from './Head';
 export * from './Initial';
+export * from './Join';
 export * from './Last';
 export * from './Push';
 export * from './Reverse';
