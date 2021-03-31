@@ -1,5 +1,4 @@
 export * from './CastAs';
-export * from './LiteralUnion';
 export * from './OmitAllBy';
 export * from './OmitBy';
 export * from './OmitStrict';
@@ -7,4 +6,3 @@ export * from './Opaque';
 export * from './PickAllBy';
 export * from './PickBy';
 export * from './SymmetricDifference';
-export * from './UnionOf';
