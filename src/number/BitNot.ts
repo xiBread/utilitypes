@@ -1,13 +1,19 @@
 import type { Binary } from './';
 
-type Not<N> = N extends '0'
+/**
+ * Constructs a type by inverting the bits of `N`.
+ *
+ * @example
+ * ```ts
+ * type T0 = BitNot<'0000000000000101'>;
+ * //	^ = type T0 = '1111111111111010'
+ */
+export type BitNot<N> = N extends '0'
 	? '1'
 	: N extends '1'
 	? '0'
 	: N extends `${infer T}${infer U}`
 	? T extends Binary
-		? `${Not<T>}${Not<U>}`
+		? `${BitNot<T>}${BitNot<U>}`
 		: never
 	: never;
-
-export type BitNot<N> = Not<N>;
