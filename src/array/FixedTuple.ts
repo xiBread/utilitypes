@@ -23,8 +23,8 @@ type Tuple<T, N extends number> = {
  *
  * @example
  * ```ts
- * type T0 = TupleOf<number, 3>;
+ * type T0 = FixedTuple<number, 3>;
  * //	^ = type T0 = [number, number, number]
  * ```
  */
-export type TupleOf<T, N extends number> = number extends N ? T[] : Tuple<T, N>;
+export type FixedTuple<T, N extends number> = number extends N ? T[] : Tuple<T, N>;
