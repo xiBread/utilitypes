@@ -9,4 +9,7 @@ export * from './Replace';
 export * from './Split';
 export * from './SplitBy';
 export * from './StrictPath';
+export * from './Trim';
+export * from './TrimEnd';
+export * from './TrimStart';
 export * from './Value';
