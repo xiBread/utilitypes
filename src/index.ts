@@ -20,4 +20,4 @@ export type ExtendSelf<T, U> = T extends T ? U : never;
 /**
  * @internal
  */
-export type Separators = '-' | '_' | ' ';
+export type Delimiter = '-' | '_' | ' ';
