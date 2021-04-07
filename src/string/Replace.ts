@@ -1,10 +1,10 @@
 import type { CastAs } from '../';
 
 /**
- * Replaces all occurances of `U` in `S` with `V`.
+ * Replaces all occurances of `T` in `S` with `U`.
  */
-export type Replace<S extends string, U extends string, V extends string> = S extends `${infer F}${U}${infer R}`
-	? Replace<`${F}${V}${R}`, U, V>
+export type Replace<S extends string, T extends string, U extends string> = S extends `${infer F}${T}${infer R}`
+	? Replace<`${F}${U}${R}`, T, U>
 	: S extends infer T
 	? CastAs<T, string>
 	: never;

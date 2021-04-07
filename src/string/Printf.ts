@@ -11,8 +11,8 @@ type Token<T> =
 /**
  * Constructs a tuple type based on each print token found in `S`.
  */
-export type Printf<S extends string> = S extends `${infer T}%${infer F}${infer R}`
-	? [Token<F>, ...Printf<R>]
-	: S extends `${infer T}%${infer F}`
-	? [Token<F>]
+export type Printf<S extends string> = S extends `${infer $}%${infer T}${infer R}`
+	? [Token<T>, ...Printf<R>]
+	: S extends `${infer $}%${infer T}`
+	? [Token<T>]
 	: [];
