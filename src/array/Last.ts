@@ -1,4 +1,4 @@
-import type { Reverse } from './Reverse';
+import type { Reverse } from '../';
 
 /**
  * Constructs a type by picking the last element in tuple `T`.

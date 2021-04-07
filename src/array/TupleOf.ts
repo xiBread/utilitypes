@@ -1,5 +1,4 @@
-import type { LastType } from '../union/LastType';
-import type { Push } from './Push';
+import type { LastType, Push } from '../';
 
 /**
  * Constructs a tuple type from each member in a union type.

@@ -1,4 +1,4 @@
-import type { Compact } from './Compact';
+import type { Compact } from '../';
 
 /**
  * Constructs an intersection type from a union.

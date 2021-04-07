@@ -1,5 +1,4 @@
-import type { Head } from './Head';
-import type { Tail } from './Tail';
+import type { Head, Tail } from '../';
 
 /**
  * Constructs a tuple type from the head and tail of `T`.

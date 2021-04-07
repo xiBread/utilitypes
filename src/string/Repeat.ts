@@ -1,4 +1,4 @@
-import type { FixedTuple, Join } from '../array';
+import type { FixedTuple, Join } from '../';
 
 /**
  * Constructs a string from `S` containing `N` copies concatenated together.
