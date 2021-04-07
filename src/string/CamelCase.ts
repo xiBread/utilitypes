@@ -1,6 +1,6 @@
 import type { Delimiter, Split } from '../';
 
-type Inner<T extends unknown[], U> = T extends [`${infer F}`, ...infer R]
+type Inner<T, U> = T extends [`${infer F}`, ...infer R]
 	? F extends undefined
 		? ''
 		: F extends ''
@@ -8,7 +8,7 @@ type Inner<T extends unknown[], U> = T extends [`${infer F}`, ...infer R]
 		: `${U extends '' ? F : Capitalize<F>}${Inner<R, F>}`
 	: '';
 
-type Concat<T extends string[]> = T extends [`${infer F}`, ...infer R] ? Uncapitalize<`${F}${Inner<R, F>}`> : never;
+type Concat<T> = T extends [`${infer F}`, ...infer R] ? Uncapitalize<`${F}${Inner<R, F>}`> : never;
 
 /**
  * Converts the first character in the string to a lowercase equivalent and each subsequent first
