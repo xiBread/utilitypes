@@ -1,6 +1,6 @@
 export * from './CamelCase';
 export * from './ConstantCase';
-export * from './Delimited';
+export * from './Delimit';
 export * from './PascalCase';
 export * from './Path';
 export * from './PathParameters';

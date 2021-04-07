@@ -1,4 +1,4 @@
-import type { Delimited } from './Delimited';
+import type { Delimit } from '../';
 
 /**
  * Converts each character in the string to the uppercase version and delimits each word in the
@@ -16,4 +16,4 @@ import type { Delimited } from './Delimited';
  * //	^ = type T2 = 'HELLO_WORLD'
  * ```
  */
-export type ConstantCase<S extends string> = Uppercase<Delimited<S, '_'>>;
+export type ConstantCase<S extends string> = Uppercase<Delimit<S, '_'>>;
