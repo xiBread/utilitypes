@@ -1,4 +1,4 @@
-import type { IntersectionOf } from '../object';
+import type { IntersectionOf } from '../';
 
 /**
  * Constructs a type by picking the last member in `T`.
