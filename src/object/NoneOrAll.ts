@@ -24,11 +24,12 @@
  * };
  *
  * const user2: User = {
+ * //	^ Types of property 'state' are incompatible.
+ * //		Type 'string' is not assignable to type 'never'.
  * 	firstName: 'Bob',
  * 	lastName: 'Jones',
  * 	age: 30,
  * 	state: 'NY'
- * 	// Error since `city` is required
  * };
  * ```
  */
