@@ -1,4 +1,4 @@
-import type { Separators, SplitBy } from '../';
+import type { Separators, Split } from '../';
 
 type Inner<T extends unknown[], U> = T extends [`${infer F}`, ...infer R]
 	? F extends undefined
@@ -26,4 +26,4 @@ type Concat<T extends string[]> = T extends [`${infer F}`, ...infer R] ? Uncapit
  * //	^ = type T2 = 'helloWorld'
  * ```
  */
-export type CamelCase<S extends string> = Concat<SplitBy<S, Separators>>;
+export type CamelCase<S extends string> = Concat<Split<S, Separators>>;

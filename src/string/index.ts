@@ -8,7 +8,7 @@ export * from './Printf';
 export * from './Repeat';
 export * from './Replace';
 export * from './Split';
-export * from './SplitBy';
+export * from './SplitWith';
 export * from './StrictPath';
 export * from './Trim';
 export * from './TrimEnd';
