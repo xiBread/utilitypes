@@ -1,4 +1,5 @@
 export * from './Assign';
+export * from './Compact';
 export * from './DeepPartial';
 export * from './DeepReadonly';
 export * from './ExclusiveOr';
