@@ -1,4 +1,3 @@
-export * from './Concat';
 export * from './Deconstruct';
 export * from './Entries';
 export * from './Filter';
