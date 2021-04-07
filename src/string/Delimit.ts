@@ -7,6 +7,6 @@ type Join<T extends unknown[], U extends string> = T extends [`${infer F}`, ...i
 /**
  * Converts a string by delimiting each compound word in `S` by `U`.
  */
-export type Delimited<S extends string, U extends string> = string extends U
+export type Delimit<S extends string, U extends string> = string extends U
 	? S
 	: Join<SplitWith<S, Delimiter | UppercaseCharacter>, U>;
