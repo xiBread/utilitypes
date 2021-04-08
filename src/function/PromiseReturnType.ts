@@ -1,11 +1,6 @@
 import type { ExtendSelf } from '../';
 
-type Resolved<T> = T extends Promise<infer U>
-	? {
-			0: Resolved<U>;
-			1: U;
-	  }[T extends Promise<unknown> ? 0 : 1]
-	: T;
+type Resolved<T> = T extends Promise<infer U> ? (T extends Promise<unknown> ? Resolved<U> : U) : T;
 
 /**
  * Constructs a type consisting of the return type of a `Promise`.
