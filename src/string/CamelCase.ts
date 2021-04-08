@@ -8,8 +8,6 @@ type Inner<T, U> = T extends [`${infer F}`, ...infer R]
 		: `${U extends '' ? F : Capitalize<F>}${Inner<R, F>}`
 	: '';
 
-type Concat<T> = T extends [`${infer F}`, ...infer R] ? Uncapitalize<`${F}${Inner<R, F>}`> : never;
-
 /**
  * Converts the first character in the string to a lowercase equivalent and each subsequent first
  * character of each word in the string to an uppercase equivalent.
@@ -26,4 +24,6 @@ type Concat<T> = T extends [`${infer F}`, ...infer R] ? Uncapitalize<`${F}${Inne
  * //	^ = type T2 = 'helloWorld'
  * ```
  */
-export type CamelCase<S extends string> = Concat<Split<S, Delimiter>>;
+export type CamelCase<S extends string> = Split<S, Delimiter> extends [`${infer F}`, ...infer R]
+	? Uncapitalize<`${F}${Inner<R, F>}`>
+	: never;
