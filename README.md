@@ -1,13 +1,16 @@
 # Extended Utility Types
 
+Yet another utility type library.
+
 ## Table of Contents
 
 - [Aliases](###Aliases)
   - `LiteralPrimitive`
   - `LowercaseCharacter`
-  - `Maybe`
+  - `Maybe<T>`
   - `Nil`
-  - `Nullable`
+  - `Nillable<T>`
+  - `Nullable<T>`
   - `Primitive`
   - `UppercaseCharacter`
 - [Array](###Array)
