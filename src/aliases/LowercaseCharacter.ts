@@ -1,3 +1,6 @@
+/**
+ * A type alias for each character in the English alphabet in lowercase form.
+ */
 /* prettier-ignore */
 export type LowercaseCharacter =
 	| 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g'

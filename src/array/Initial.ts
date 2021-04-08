@@ -5,7 +5,7 @@ import type { Filter, Last } from '../';
  *
  * @example
  * ```ts
- * type T0 = Last<[1, 2, 3, 4, 5]>;
+ * type T0 = Initial<[1, 2, 3, 4, 5]>;
  * //	^ = type T0 = [1, 2, 3, 4]
  * ```
  */
