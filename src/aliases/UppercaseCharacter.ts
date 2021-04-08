@@ -1,3 +1,6 @@
+/**
+ * A type alias for each character in the English alphabet in uppercase form.
+ */
 /* prettier-ignore */
 export type UppercaseCharacter =
 	| 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G'

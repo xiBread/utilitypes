@@ -2,7 +2,7 @@ import type { ExtendSelf } from '../';
 
 /* prettier-ignore */
 type EntryPairing<T> = T extends object
-	? ReadonlyArray<readonly [keyof T, T[keyof T]]>
+	? readonly (readonly [keyof T, T[keyof T]])[]
 	: T extends unknown[]
 		? readonly [number, T[number]]
 		: T extends Set<unknown>
