@@ -1,4 +1,5 @@
 export * from './Absolute';
+export * from './Add';
 export * from './BitAnd';
 export * from './BitLeftShift';
 export * from './BitNot';
