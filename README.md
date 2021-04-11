@@ -24,6 +24,8 @@ Yet another utility type library.
   - `Last<T>`
   - `Push<T, U>`
   - `Reverse<T>`
+  - `Shift<T>`
+  - `Slice<T, X, Y>`
   - `Tail<T>`
   - `TupleOf<T>`
   - `Unshift<T, U>`
@@ -40,6 +42,7 @@ Yet another utility type library.
   - `PromiseReturnType<T>`
 - [Number](###Number)
   - `Absolute<N>`
+  - `Add<X, Y>`
   - `BitAnd<X, Y>`
   - `BitLeftShift<N>`
   - `BitNot<N>`
@@ -58,6 +61,7 @@ Yet another utility type library.
   - `Mapped<T>`
   - `Mutable<T>`
   - `NoneOrAll<T>`
+  - `RecordOf<T>`
 - [String](###String)
   - `CamelCase<S>`
   - `ConstantCase<S>`
