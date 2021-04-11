@@ -9,6 +9,7 @@ export * from './Last';
 export * from './Push';
 export * from './Reverse';
 export * from './Shift';
+export * from './Slice';
 export * from './Tail';
 export * from './TupleOf';
 export * from './Unshift';
