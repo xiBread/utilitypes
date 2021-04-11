@@ -8,3 +8,4 @@ export * from './IntersectionOf';
 export * from './Mapped';
 export * from './Mutable';
 export * from './NoneOrAll';
+export * from './RecordOf';
