@@ -7,3 +7,4 @@ export * from './BitOr';
 export * from './BitRightShift';
 export * from './BitXor';
 export * from './Range';
+export * from './Subtract';
