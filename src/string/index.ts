@@ -7,6 +7,7 @@ export * from './PathParameters';
 export * from './Printf';
 export * from './Repeat';
 export * from './Replace';
+export * from './ReplaceAll';
 export * from './Split';
 export * from './SplitWith';
 export * from './StrictPath';
