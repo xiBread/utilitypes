@@ -1,6 +1,6 @@
-import type { Mapped } from '../';
+import type { Expand } from '../';
 
-type Merge<T, U> = Mapped<Omit<T, Extract<keyof T, keyof U>>> & U;
+type Merge<T, U> = Expand<Omit<T, Extract<keyof T, keyof U>>> & U;
 
 /**
  * Constructs a type with each property in `U` assigned to `T`.
