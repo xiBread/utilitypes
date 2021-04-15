@@ -7,5 +7,3 @@ export * from './BitOr';
 export * from './BitRightShift';
 export * from './BitXor';
 export * from './Range';
-
-export type Binary = '0' | '1';

@@ -1,5 +1,3 @@
-import type { Binary } from './';
-
 /**
  * Constructs a type by inverting the bits of `N`.
  *
@@ -13,7 +11,7 @@ export type BitNot<N> = N extends '0'
 	: N extends '1'
 	? '0'
 	: N extends `${infer T}${infer U}`
-	? T extends Binary
+	? T extends '0' | '1'
 		? `${BitNot<T>}${BitNot<U>}`
 		: never
 	: never;
