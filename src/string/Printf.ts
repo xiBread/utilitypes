@@ -1,18 +1,22 @@
 /* prettier-ignore */
-type Token<T> =
-	'a' extends T ? any :
-	's' extends T ? string :
-	'd' extends T ? number :
-	'i' extends T ? number :
-	'f' extends T ? number :
-	'b' extends T ? bigint :
-	'o' extends T ? object : never;
+type Specifier<T> =
+	T extends 'a' ? any :
+	T extends 'b' ? bigint :
+	T extends 'd' ? number :
+	T extends 'i' ? number :
+	T extends 'u' ? number :
+	T extends 'o' ? number :
+	T extends 'x' ? number :
+	T extends 'f' ? number :
+	T extends 'e' ? number :
+	T extends 'c' ? string :
+	T extends 's' ? string : never
 
 /**
- * Constructs a tuple type based on each print token found in `S`.
+ * Constructs a tuple type based on each specifier found in `S`.
  */
 export type Printf<S extends string> = S extends `${infer $}%${infer T}${infer R}`
-	? [Token<T>, ...Printf<R>]
+	? [Specifier<T>, ...Printf<R>]
 	: S extends `${infer $}%${infer T}`
-	? [Token<T>]
+	? [Specifier<T>]
 	: [];
