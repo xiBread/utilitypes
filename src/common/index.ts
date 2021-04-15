@@ -1,4 +1,6 @@
 export * from './CastAs';
+export * from './ExcludeStrict';
+export * from './ExtractStrict';
 export * from './OmitAllBy';
 export * from './OmitBy';
 export * from './OmitStrict';
