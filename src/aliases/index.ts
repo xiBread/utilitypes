@@ -6,3 +6,4 @@ export * from './Nillable';
 export * from './Nullable';
 export * from './Primitive';
 export * from './UppercaseCharacter';
+export * from './Whitespace';
