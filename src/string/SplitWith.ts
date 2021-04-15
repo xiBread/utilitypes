@@ -1,3 +1,5 @@
+import type { Initial } from '../';
+
 /**
  * Constructs a tuple type, including `U`, by splitting `S` by `U`.
  *
@@ -8,11 +10,9 @@
  * ```
  */
 export type SplitWith<S extends string, U extends string> = S extends `${infer F}${U}${infer R}`
-	? S extends `${F}${infer T}${R}`
-		? T extends U
-			? S extends `${infer F}${T}${infer R}`
-				? [...SplitWith<F, U>, T, ...SplitWith<R, U>]
-				: never
-			: never
-		: never
+	? R extends U
+		? [F]
+		: [F, U, ...SplitWith<R, U>]
+	: U extends ''
+	? Initial<[S]>
 	: [S];
