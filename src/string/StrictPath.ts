@@ -23,9 +23,10 @@ type PathString<T, K extends keyof T> = K extends string
  *
  * declare function f1<T extends StrictPath<typeof o>>(path: T): void;
  *
- * f1('a') // OK
- * f1('b.c.d') // OK
- * f1('b.c') // ERROR
+ * f1('a');
+ * f1('b.c.d');
+ * f1('b.c');
+ * //	^ Argument of type '"b.c"' is not assignable to parameter of type '"a" | "b.f" | "b.c.d"'.
  * ```
  */
 export type StrictPath<T> = ExtendSelf<T, PathString<T, keyof T>>;
