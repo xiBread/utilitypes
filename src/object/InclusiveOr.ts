@@ -1,4 +1,4 @@
-import type { ExtendSelf } from '../';
+import type { Expand } from '../';
 
 type IOR<T, U extends keyof T> = Pick<T, Exclude<keyof T, U>> &
 	{
@@ -31,4 +31,4 @@ type IOR<T, U extends keyof T> = Pick<T, Exclude<keyof T, U>> &
  * };
  * ```
  */
-export type InclusiveOr<T, K extends keyof T> = ExtendSelf<T, IOR<T, K>>;
+export type InclusiveOr<T, K extends keyof T> = Expand<IOR<T, K>>;
