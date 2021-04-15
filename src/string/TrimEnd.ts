@@ -1,3 +1,5 @@
+import type { Whitespace } from '../';
+
 /**
  * Removes whitespace from the end of a string.
  *
@@ -7,4 +9,4 @@
  * //	^ = type T0 = '   Hello'
  * ```
  */
-export type TrimEnd<S extends string> = S extends `${infer T} ` ? TrimEnd<T> : S;
+export type TrimEnd<S extends string> = S extends `${infer T}${Whitespace}` ? TrimEnd<T> : S;

@@ -1,3 +1,5 @@
+import type { ExtendSelf, TrimEnd, TrimStart } from '../';
+
 /**
  * Removes whitespace from both ends of a string.
  *
@@ -7,4 +9,4 @@
  * //	^ = type T0 = 'Hello'
  * ```
  */
-export type Trim<S extends string> = S extends ` ${infer T} ` ? Trim<T> : S;
+export type Trim<S extends string> = ExtendSelf<S, TrimStart<TrimEnd<S>>>;
