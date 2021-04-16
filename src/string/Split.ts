@@ -1,4 +1,4 @@
-import type { Filter, SplitWith } from '../';
+import type { Initial } from '../';
 
 /**
  * Constructs a tuple type, excluding `U`, by splitting `S` by `U`.
@@ -9,4 +9,8 @@ import type { Filter, SplitWith } from '../';
  * //	^ = type T0 = ["aaa", "bbb", "ccc"]
  * ```
  */
-export type Split<S extends string, U extends string> = Filter<SplitWith<S, U>, U>;
+export type Split<S extends string, U extends string> = S extends `${infer F}${U}${infer R}`
+	? [F, ...Split<R, U>]
+	: U extends ''
+	? Initial<[S]>
+	: [S];
