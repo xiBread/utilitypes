@@ -6,7 +6,7 @@ import type { IntersectionOf } from '../';
  * @example
  * ```ts
  * type T0 = LastType<'a' | 'b' | 'c'>;
- * //	^ = type T0 = "c";
+ * //	^ = type T0 = "c"
  * ```
  */
 export type LastType<T> = IntersectionOf<T extends unknown ? (x: T) => void : never> extends (x: infer U) => void

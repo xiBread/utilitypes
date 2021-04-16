@@ -1,5 +1,5 @@
 /**
- * Constructs a tuple type by adding `U` to the beginning of `T`.
+ * Constructs a tuple type by prepending `U` to `T`.
  *
  * @example
  * ```ts

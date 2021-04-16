@@ -6,4 +6,16 @@ type Concat<T extends unknown[], S extends string, H extends LiteralPrimitive = 
 		: never
 	: H;
 
+/**
+ * Joins each element in `T` separated by `S`.
+ *
+ * @example
+ * ```ts
+ * type T0 = Join<['foo', 'bar', 'baz']>;
+ * //	^ = type T0 = "foo,bar,baz"
+ *
+ * type T1 = Join<['some', 'long', 'word'], '-'>;
+ * //	^ = type T1 = "some-long-word"
+ * ```
+ */
 export type Join<T extends unknown[], S extends string = ','> = Concat<T, S> extends infer U ? U : never;
