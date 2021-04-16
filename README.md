@@ -13,6 +13,7 @@ Yet another utility type library.
   - `Nullable<T>`
   - `Primitive`
   - `UppercaseCharacter`
+  - `Whitespace`
 - [Array](###Array)
   - `Deconstruct<T>`
   - `Entries<T>`
@@ -31,6 +32,8 @@ Yet another utility type library.
   - `Unshift<T, U>`
 - [Common](###Common)
   - `CastAs<T, U>`
+  - `ExcludeStrict<T, U>`
+  - `ExtractStrict<T, U>`
   - `OmitAllBy<T, U>`
   - `OmitBy<T, U, K>`
   - `OmitStrict<T, K>`
@@ -50,15 +53,16 @@ Yet another utility type library.
   - `BitRightShift<N>`
   - `BitXor<X, Y>`
   - `Range<X, Y>`
+  - `Subtract<X, Y>`
 - [Object](###Object)
   - `Assign<T, U>`
   - `Compact<T>`
   - `DeepPartial<T>`
   - `DeepReadonly<T>`
   - `ExclusiveOr<T, U>`
+  - `Expand<T>`
   - `InclusiveOr<T, U>`
   - `IntersectionOf<T>`
-  - `Mapped<T>`
   - `Mutable<T>`
   - `NoneOrAll<T>`
   - `RecordOf<T>`
@@ -68,10 +72,13 @@ Yet another utility type library.
   - `Delimit<S, U>`
   - `PascalCase<S>`
   - `Path<T>`
-  - `PathParameters<T>`
+  - `PadEnd<S, N, T>`
+  - `PadStart<S, N, T>`
   - `Printf<S>`
+  - `QueryParameters<T>`
   - `Repeat<S, N>`
   - `Replace<S, T, U>`
+  - `ReplaceAll<S, T, U>`
   - `Split<S, U>`
   - `SplitWith<S, U>`
   - `StrictPath<T>`
@@ -86,16 +93,172 @@ Yet another utility type library.
 
 ### Aliases
 
+#### `LiteralPrimitive`
+
+#### `LowercaseCharacter`
+
+#### `Maybe<Type>`
+
+#### `Nil`
+
+#### `Nillable<Type>`
+
+#### `Nullable<Type>`
+
+#### `Primitive`
+
+#### `UppercaseCharacter`
+
+#### `Whitespace`
+
 ### Array
+
+#### `Deconstruct<Array>`
+
+#### `Entries<Array>`
+
+#### `Filter<Array, Type>`
+
+#### `FixedTuple<Array, Length>`
+
+#### `Head<Array>`
+
+#### `Initial<Array>`
+
+#### `Join<Array, Separator>`
+
+#### `Last<Array>`
+
+#### `Push<Array, Type>`
+
+#### `Reverse<Array>`
+
+#### `Shift<Array>`
+
+#### `Slice<Array, Start, End>`
+
+#### `Tail<Array>`
+
+#### `TupleOf<Type>`
+
+#### `Unshift<Array, Type>`
 
 ### Common
 
+#### `CastAs<Type, Type>`
+
+#### `ExcludeStrict<Type, ExcludedUnion>`
+
+#### `ExtractStrict<Type, Union>`
+
+#### `OmitAllBy<Type, Type>`
+
+#### `OmitBy<Type, Type, Keys>`
+
+#### `OmitStrict<Type, Keys>`
+
+#### `Opaque<Type, Type>`
+
+#### `PickAllBy<Type, Type>`
+
+#### `PickBy<Type, Type, Keys>`
+
 ### Function
+
+#### `Promisable<Type>`
+
+#### `PromiseReturnType<Type>`
 
 ### Number
 
+#### `Absolute<Number>`
+
+#### `Add<Addend, Addend>`
+
+#### `BitAnd<Operand, Operand>`
+
+#### `BitLeftShift<Operand>`
+
+#### `BitNot<Operand>`
+
+#### `BitOr<Operand, Operand>`
+
+#### `BitRightShift<Operand>`
+
+#### `BitXor<Operand, Operand>`
+
+#### `Range<Start, End>`
+
+#### `Subtract<Minuend, Subtrahend>`
+
 ### Object
+
+#### `Assign<Target, Sources>`
+
+#### `Compact<Type>`
+
+#### `DeepPartial<Type>`
+
+#### `DeepReadonly<Type>`
+
+#### `ExclusiveOr<Type, Type>`
+
+#### `Expand<Type>`
+
+#### `InclusiveOr<Type, Keys>`
+
+#### `IntersectionOf<Union>`
+
+#### `Mutable<Type>`
+
+#### `NoneOrAll<Type>`
+
+#### `RecordOf<Type>`
 
 ### String
 
+#### `CamelCase<StringType>`
+
+#### `ConstantCase<StringType>`
+
+#### `Delimit<StringType, Separator>`
+
+#### `PascalCase<StringType>`
+
+#### `Path<Type>`
+
+#### `PadEnd<StringType, TargetLength, PadString>`
+
+#### `PadStart<StringType, TargetLength, PadString>`
+
+#### `Printf<PrintfString>`
+
+#### `QueryParameters<QueryString>`
+
+#### `Repeat<StringType, Amount>`
+
+#### `Replace<StringType, Substring, Replacement>`
+
+#### `ReplaceAll<StringType, Substring, Replacement>`
+
+#### `Split<StringType, Separator>`
+
+#### `SplitWith<StringType, Separator>`
+
+#### `StrictPath<Type>`
+
+#### `Trim<StringType>`
+
+#### `TrimEnd<StringType>`
+
+#### `TrimStart<StringType>`
+
+#### `Value<Type, PathType>`
+
 ### Union
+
+#### `LastType<Type>`
+
+#### `LiteralUnion<Type>`
+
+#### `SymmetricDifference<Type, Type>`
