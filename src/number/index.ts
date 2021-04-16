@@ -6,5 +6,7 @@ export * from './BitNot';
 export * from './BitOr';
 export * from './BitRightShift';
 export * from './BitXor';
+export * from './GreaterThan';
+export * from './LessThan';
 export * from './Range';
 export * from './Subtract';
