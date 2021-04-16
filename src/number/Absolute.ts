@@ -7,14 +7,6 @@
  * //	^ = type T0 = "50"
  *
  * type T1 = Absolute<1642>;
- * //	^ = type T1 = 1642
+ * //	^ = type T1 = "1642"
  */
-export type Absolute<N extends number | string> = `${N}` extends `${infer S}${infer T}`
-	? S extends '-'
-		? T extends `${number}`
-			? T
-			: never
-		: `${N}` extends `${number}`
-		? N
-		: never
-	: never;
+export type Absolute<N extends number> = `${N}` extends `-${infer T}` ? T : `${N}`;
