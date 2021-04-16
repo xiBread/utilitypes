@@ -1,6 +1,7 @@
 export * from './CamelCase';
 export * from './ConstantCase';
 export * from './Delimit';
+export * from './Length';
 export * from './PadEnd';
 export * from './PadStart';
 export * from './PascalCase';
@@ -10,6 +11,7 @@ export * from './QueryParameters';
 export * from './Repeat';
 export * from './Replace';
 export * from './ReplaceAll';
+export * from './SliceString';
 export * from './Split';
 export * from './SplitWith';
 export * from './StrictPath';
