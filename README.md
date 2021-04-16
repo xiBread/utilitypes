@@ -30,6 +30,8 @@ Yet another utility type library.
   - `Tail<T>`
   - `TupleOf<T>`
   - `Unshift<T, U>`
+  - `Unzip<T>`
+  - `Zip<T>`
 - [Common](###Common)
   - `CastAs<T, U>`
   - `ExcludeStrict<T, U>`
@@ -52,6 +54,8 @@ Yet another utility type library.
   - `BitOr<X, Y>`
   - `BitRightShift<N>`
   - `BitXor<X, Y>`
+  - `GreaterThan<X, Y>`
+  - `LessThan<X, Y>`
   - `Range<X, Y>`
   - `Subtract<X, Y>`
 - [Object](###Object)
@@ -70,15 +74,17 @@ Yet another utility type library.
   - `CamelCase<S>`
   - `ConstantCase<S>`
   - `Delimit<S, U>`
-  - `PascalCase<S>`
-  - `Path<T>`
+  - `Length<S>`
   - `PadEnd<S, N, T>`
   - `PadStart<S, N, T>`
+  - `PascalCase<S>`
+  - `Path<T>`
   - `Printf<S>`
   - `QueryParameters<T>`
   - `Repeat<S, N>`
   - `Replace<S, T, U>`
   - `ReplaceAll<S, T, U>`
+  - `SliceString<S, X, Y>`
   - `Split<S, U>`
   - `SplitWith<S, U>`
   - `StrictPath<T>`
@@ -143,6 +149,10 @@ Yet another utility type library.
 
 #### `Unshift<Array, Type>`
 
+#### `Unzip<Array>`
+
+#### `Zip<Array>`
+
 ### Common
 
 #### `CastAs<Type, Type>`
@@ -187,6 +197,10 @@ Yet another utility type library.
 
 #### `BitXor<Operand, Operand>`
 
+#### `GreaterThan<Number, Number>`
+
+#### `LessThan<Number, Number>`
+
 #### `Range<Start, End>`
 
 #### `Subtract<Minuend, Subtrahend>`
@@ -223,13 +237,15 @@ Yet another utility type library.
 
 #### `Delimit<StringType, Separator>`
 
-#### `PascalCase<StringType>`
-
-#### `Path<Type>`
+#### `Length<StringType>`
 
 #### `PadEnd<StringType, TargetLength, PadString>`
 
 #### `PadStart<StringType, TargetLength, PadString>`
+
+#### `PascalCase<StringType>`
+
+#### `Path<Type>`
 
 #### `Printf<PrintfString>`
 
@@ -240,6 +256,8 @@ Yet another utility type library.
 #### `Replace<StringType, Substring, Replacement>`
 
 #### `ReplaceAll<StringType, Substring, Replacement>`
+
+#### `SliceString<StringType, Start, End>`
 
 #### `Split<StringType, Separator>`
 
