@@ -13,3 +13,5 @@ export * from './Slice';
 export * from './Tail';
 export * from './TupleOf';
 export * from './Unshift';
+export * from './Unzip';
+export * from './Zip';
