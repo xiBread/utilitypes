@@ -1,5 +1,3 @@
-import type { Filter, Head } from '../';
-
 /**
  * Constructs a type by picking every element in tuple `T` except the first.
  *
@@ -9,4 +7,4 @@ import type { Filter, Head } from '../';
  * //	^ = type T0 = [2, 3, 4, 5]
  * ```
  */
-export type Tail<T extends unknown[]> = Filter<T, Head<T>>;
+export type Tail<T extends unknown[]> = T extends [infer F, ...infer R] ? R : never;
