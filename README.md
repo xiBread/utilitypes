@@ -19,7 +19,9 @@ Yet another utility type library.
   - `Entries<T>`
   - `Filter<T, U>`
   - `FixedTuple<T, N>`
+  - `Flat<T, N>`
   - `Head<T>`
+  - `Includes<T, U>`
   - `Initial<T>`
   - `Join<T, S>`
   - `Last<T>`
@@ -127,7 +129,11 @@ Yet another utility type library.
 
 #### `FixedTuple<Array, Length>`
 
+### `Flat<Array, Depth>`
+
 #### `Head<Array>`
+
+### `Includes<Array, Type>`
 
 #### `Initial<Array>`
 
