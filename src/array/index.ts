@@ -2,6 +2,7 @@ export * from './Deconstruct';
 export * from './Entries';
 export * from './Filter';
 export * from './FixedTuple';
+export * from './Flat';
 export * from './Head';
 export * from './Initial';
 export * from './Join';
