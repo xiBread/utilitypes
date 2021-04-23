@@ -4,6 +4,7 @@ export * from './Filter';
 export * from './FixedTuple';
 export * from './Flat';
 export * from './Head';
+export * from './Includes';
 export * from './Initial';
 export * from './Join';
 export * from './Last';
