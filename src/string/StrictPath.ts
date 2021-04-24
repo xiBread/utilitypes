@@ -2,7 +2,7 @@ import type { ExtendSelf } from '../';
 
 type PathString<T, K extends keyof T> = K extends string
 	? T[K] extends Record<string, any>
-		? `${K}.${PathString<T[K], Exclude<keyof T[K], keyof any[]>> & string}`
+		? `${K}.${PathString<T[K], Exclude<keyof T[K], PropertyKey[]>> & string}`
 		: `${K}`
 	: never;
 

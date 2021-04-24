@@ -27,10 +27,10 @@ type MapArray<T extends unknown[]> = { [K in { [K in keyof T]: K }[number]]: T[K
  * //		}
  * ```
  */
-export type RecordOf<T> = T extends keyof any
+export type RecordOf<T> = T extends PropertyKey
 	? { [K in T]: K }
-	: T extends (keyof any)[]
+	: T extends PropertyKey[]
 	? MapArray<T>
-	: T extends Record<keyof any, unknown>
+	: T extends Record<PropertyKey, unknown>
 	? T
 	: never;

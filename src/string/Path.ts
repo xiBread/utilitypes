@@ -1,4 +1,4 @@
-type Child<T, K extends keyof T> = Exclude<keyof T[K], keyof any[]> & string;
+type Child<T, K extends keyof T> = Exclude<keyof T[K], keyof PropertyKey[]> & string;
 
 /* prettier-ignore */
 type PathString<T, K extends keyof T> = K extends string
