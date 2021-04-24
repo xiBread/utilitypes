@@ -6,6 +6,7 @@ export * from './ExclusiveOr';
 export * from './Expand';
 export * from './InclusiveOr';
 export * from './IntersectionOf';
+export * from './Invert';
 export * from './Mutable';
 export * from './NoneOrAll';
 export * from './RecordOf';
