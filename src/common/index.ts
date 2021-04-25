@@ -7,3 +7,4 @@ export * from './OmitStrict';
 export * from './Opaque';
 export * from './PickAllBy';
 export * from './PickBy';
+export * from './PickRequired';
