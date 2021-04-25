@@ -8,5 +8,6 @@ export * from './BitRightShift';
 export * from './BitXor';
 export * from './GreaterThan';
 export * from './LessThan';
+export * from './ParseInt';
 export * from './Range';
 export * from './Subtract';
