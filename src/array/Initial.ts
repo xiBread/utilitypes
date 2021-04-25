@@ -7,4 +7,4 @@
  * //	^ = type T0 = [1, 2, 3, 4]
  * ```
  */
-export type Initial<T extends unknown[]> = T extends [...infer F, infer R] ? F : never;
+export type Initial<T extends unknown[]> = T extends [...infer F, infer R] ? F : [];
