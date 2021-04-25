@@ -1,6 +1,7 @@
 export * from './CamelCase';
 export * from './ConstantCase';
 export * from './Delimit';
+export * from './Get';
 export * from './Length';
 export * from './PadEnd';
 export * from './PadStart';
@@ -18,4 +19,3 @@ export * from './StrictPath';
 export * from './Trim';
 export * from './TrimEnd';
 export * from './TrimStart';
-export * from './Value';
