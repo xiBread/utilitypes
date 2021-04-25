@@ -3,5 +3,6 @@ export * from './ExtractStrict';
 export * from './IsUnion';
 export * from './LastType';
 export * from './LiteralUnion';
+export * from './Permutate';
 export * from './SymmetricDifference';
 export * from './UnionOf';
