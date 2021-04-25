@@ -1,6 +1,4 @@
-import type { CastAs, FixedTuple } from '../';
+import type { FixedTuple } from '../';
 
-export type Add<X extends number, Y extends number> = CastAs<
-	[...FixedTuple<unknown, X>, ...FixedTuple<unknown, Y>]['length'],
-	number
->;
+export type Add<X extends number, Y extends number> = [...FixedTuple<unknown, X>, ...FixedTuple<unknown, Y>]['length'] &
+	number;
