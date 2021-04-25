@@ -1,10 +1,4 @@
-import type { LiteralPrimitive } from '../';
-
-type Concat<T extends unknown[], S extends string, H extends LiteralPrimitive = ''> = T extends [infer F, ...infer R]
-	? F extends LiteralPrimitive
-		? `${H}${Concat<R, S, R extends [] ? F : `${F}${S}`>}`
-		: never
-	: H;
+import type { LiteralPrimitive, Tail } from '../';
 
 /**
  * Joins each element in `T` separated by `S`.
@@ -18,4 +12,10 @@ type Concat<T extends unknown[], S extends string, H extends LiteralPrimitive = 
  * //	^ = type T1 = "some-long-word"
  * ```
  */
-export type Join<T extends unknown[], S extends string = ','> = Concat<T, S> extends infer U ? U : never;
+export type Join<T extends unknown[], S extends string = ','> = T extends []
+	? ''
+	: T extends [infer U]
+	? U
+	: T[0] extends LiteralPrimitive
+	? `${T[0]}${S}${Join<Tail<T>, S>}`
+	: never;
