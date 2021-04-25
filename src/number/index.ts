@@ -10,4 +10,5 @@ export * from './GreaterThan';
 export * from './LessThan';
 export * from './ParseInt';
 export * from './Range';
+export * from './Sign';
 export * from './Subtract';
