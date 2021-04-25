@@ -4,6 +4,7 @@ export * from './Maybe';
 export * from './Nil';
 export * from './Nillable';
 export * from './Nullable';
+export * from './NumberLike';
 export * from './Primitive';
 export * from './UppercaseCharacter';
 export * from './Whitespace';
