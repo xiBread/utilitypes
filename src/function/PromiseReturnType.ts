@@ -1,3 +1,5 @@
+import type { FunctionLike } from '../';
+
 type Resolved<T> = T extends Promise<infer U> ? Resolved<U> : T;
 
 /**
@@ -14,4 +16,4 @@ type Resolved<T> = T extends Promise<infer U> ? Resolved<U> : T;
  * //	^ = type T1 = string[]
  * ```
  */
-export type PromiseReturnType<T extends (...args: any[]) => Promise<unknown>> = Resolved<ReturnType<T>>;
+export type PromiseReturnType<T extends FunctionLike<Promise<unknown>>> = Resolved<ReturnType<T>>;
