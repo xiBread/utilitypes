@@ -7,6 +7,7 @@ export * from './Expand';
 export * from './InclusiveOr';
 export * from './IntersectionOf';
 export * from './Invert';
+export * from './Lookup';
 export * from './Mutable';
 export * from './NoneOrAll';
 export * from './OmitAllBy';
