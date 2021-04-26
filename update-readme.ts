@@ -26,28 +26,26 @@ import {
 		if (!file.isDeclarationFile && files.has(file.fileName)) {
 			forEachChild(file, (node: Node) => {
 				if (isTypeAliasDeclaration(node) && node.modifiers) {
+					const category = basename(dirname(file.fileName));
+					const key = category[0].toUpperCase() + category.slice(1);
+
+					const parsed = parse(file.fileName);
+					const relative = `${parsed.dir.split(`${__dirname}/`)[1]}/${parsed.base}`;
+
+					let typeName = node.name.text;
+
 					if (node.typeParameters) {
-						const { name, typeParameters } = node;
-
-						const category = basename(dirname(file.fileName));
-						const key = category[0].toUpperCase() + category.slice(1);
-
-						const typeName = `${name.escapedText}<${typeParameters
-							.map(({ name }) => name.escapedText)
-							.join(', ')}>`;
-
-						const parsed = parse(file.fileName);
-						const relative = `${parsed.dir.split(`${__dirname}/`)[1]}/${parsed.base}`;
-
-						let value: [string, string][] = [[typeName, relative]];
-
-						if (categories.has(key)) {
-							value = categories.get(key);
-							value.push([typeName, relative]);
-						}
-
-						categories.set(key, value);
+						typeName += `<${node.typeParameters.map(({ name }) => name.escapedText).join(', ')}>`;
 					}
+
+					let value: [string, string][] = [[typeName, relative]];
+
+					if (categories.has(key)) {
+						value = categories.get(key);
+						value.push([typeName, relative]);
+					}
+
+					categories.set(key, value);
 				}
 			});
 		}
