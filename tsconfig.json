@@ -4,6 +4,7 @@
 		"declaration": true,
 		"declarationDir": "dist/typings",
 		"moduleResolution": "node",
+		"esModuleInterop": true,
 		"module": "CommonJS",
 		"target": "ESNext",
 		"lib": [

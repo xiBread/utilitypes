@@ -2,287 +2,118 @@
 
 Yet another utility type library.
 
-## Table of Contents
-
-- [Aliases](###Aliases)
-  - `LiteralPrimitive`
-  - `LowercaseCharacter`
-  - `Maybe<T>`
-  - `Nil`
-  - `Nillable<T>`
-  - `Nullable<T>`
-  - `Primitive`
-  - `UppercaseCharacter`
-  - `Whitespace`
-- [Array](###Array)
-  - `Deconstruct<T>`
-  - `Entries<T>`
-  - `Filter<T, U>`
-  - `FixedTuple<T, N>`
-  - `Flat<T, N>`
-  - `Head<T>`
-  - `Includes<T, U>`
-  - `Initial<T>`
-  - `Join<T, S>`
-  - `Last<T>`
-  - `Push<T, U>`
-  - `Reverse<T>`
-  - `Shift<T>`
-  - `Slice<T, X, Y>`
-  - `Tail<T>`
-  - `TupleOf<T>`
-  - `Unshift<T, U>`
-  - `Unzip<T>`
-  - `Zip<T>`
-- [Common](###Common)
-  - `CastAs<T, U>`
-  - `ExcludeStrict<T, U>`
-  - `ExtractStrict<T, U>`
-  - `OmitAllBy<T, U>`
-  - `OmitBy<T, U, K>`
-  - `OmitStrict<T, K>`
-  - `Opaque<T, U>`
-  - `PickAllBy<T, U>`
-  - `PickBy<T, U, K>`
-- [Function](###Function)
-  - `Promisable<T>`
-  - `PromiseReturnType<T>`
-- [Number](###Number)
-  - `Absolute<N>`
-  - `Add<X, Y>`
-  - `BitAnd<X, Y>`
-  - `BitLeftShift<N>`
-  - `BitNot<N>`
-  - `BitOr<X, Y>`
-  - `BitRightShift<N>`
-  - `BitXor<X, Y>`
-  - `GreaterThan<X, Y>`
-  - `LessThan<X, Y>`
-  - `Range<X, Y>`
-  - `Subtract<X, Y>`
-- [Object](###Object)
-  - `Assign<T, U>`
-  - `Compact<T>`
-  - `DeepPartial<T>`
-  - `DeepReadonly<T>`
-  - `ExclusiveOr<T, U>`
-  - `Expand<T>`
-  - `InclusiveOr<T, U>`
-  - `IntersectionOf<T>`
-  - `Mutable<T>`
-  - `NoneOrAll<T>`
-  - `RecordOf<T>`
-- [String](###String)
-  - `CamelCase<S>`
-  - `ConstantCase<S>`
-  - `Delimit<S, U>`
-  - `Length<S>`
-  - `PadEnd<S, N, T>`
-  - `PadStart<S, N, T>`
-  - `PascalCase<S>`
-  - `Path<T>`
-  - `Printf<S>`
-  - `QueryParameters<T>`
-  - `Repeat<S, N>`
-  - `Replace<S, T, U>`
-  - `ReplaceAll<S, T, U>`
-  - `SliceString<S, X, Y>`
-  - `Split<S, U>`
-  - `SplitWith<S, U>`
-  - `StrictPath<T>`
-  - `Trim<S>`
-  - `TrimEnd<S>`
-  - `TrimStart<S>`
-  - `Value<T, P>`
-- [Union](###Union)
-  - `LastType<T>`
-  - `LiteralUnion<T>`
-  - `SymmetricDifference<T, U>`
-
-### Aliases
-
-#### `LiteralPrimitive`
-
-#### `LowercaseCharacter`
-
-#### `Maybe<Type>`
-
-#### `Nil`
-
-#### `Nillable<Type>`
-
-#### `Nullable<Type>`
-
-#### `Primitive`
-
-#### `UppercaseCharacter`
-
-#### `Whitespace`
-
-### Array
-
-#### `Deconstruct<Array>`
-
-#### `Entries<Array>`
-
-#### `Filter<Array, Type>`
-
-#### `FixedTuple<Array, Length>`
-
-### `Flat<Array, Depth>`
-
-#### `Head<Array>`
-
-### `Includes<Array, Type>`
-
-#### `Initial<Array>`
-
-#### `Join<Array, Separator>`
-
-#### `Last<Array>`
-
-#### `Push<Array, Type>`
-
-#### `Reverse<Array>`
-
-#### `Shift<Array>`
-
-#### `Slice<Array, Start, End>`
-
-#### `Tail<Array>`
-
-#### `TupleOf<Type>`
-
-#### `Unshift<Array, Type>`
-
-#### `Unzip<Array>`
-
-#### `Zip<Array>`
-
-### Common
-
-#### `CastAs<Type, Type>`
-
-#### `ExcludeStrict<Type, ExcludedUnion>`
-
-#### `ExtractStrict<Type, Union>`
-
-#### `OmitAllBy<Type, Type>`
-
-#### `OmitBy<Type, Type, Keys>`
-
-#### `OmitStrict<Type, Keys>`
-
-#### `Opaque<Type, Type>`
-
-#### `PickAllBy<Type, Type>`
-
-#### `PickBy<Type, Type, Keys>`
-
-### Function
-
-#### `Promisable<Type>`
-
-#### `PromiseReturnType<Type>`
-
-### Number
-
-#### `Absolute<Number>`
-
-#### `Add<Addend, Addend>`
-
-#### `BitAnd<Operand, Operand>`
-
-#### `BitLeftShift<Operand>`
-
-#### `BitNot<Operand>`
-
-#### `BitOr<Operand, Operand>`
-
-#### `BitRightShift<Operand>`
-
-#### `BitXor<Operand, Operand>`
-
-#### `GreaterThan<Number, Number>`
-
-#### `LessThan<Number, Number>`
-
-#### `Range<Start, End>`
-
-#### `Subtract<Minuend, Subtrahend>`
-
-### Object
-
-#### `Assign<Target, Sources>`
-
-#### `Compact<Type>`
-
-#### `DeepPartial<Type>`
-
-#### `DeepReadonly<Type>`
-
-#### `ExclusiveOr<Type, Type>`
-
-#### `Expand<Type>`
-
-#### `InclusiveOr<Type, Keys>`
-
-#### `IntersectionOf<Union>`
-
-#### `Mutable<Type>`
-
-#### `NoneOrAll<Type>`
-
-#### `RecordOf<Type>`
-
-### String
-
-#### `CamelCase<StringType>`
-
-#### `ConstantCase<StringType>`
-
-#### `Delimit<StringType, Separator>`
-
-#### `Length<StringType>`
-
-#### `PadEnd<StringType, TargetLength, PadString>`
-
-#### `PadStart<StringType, TargetLength, PadString>`
-
-#### `PascalCase<StringType>`
-
-#### `Path<Type>`
-
-#### `Printf<PrintfString>`
-
-#### `QueryParameters<QueryString>`
-
-#### `Repeat<StringType, Amount>`
-
-#### `Replace<StringType, Substring, Replacement>`
-
-#### `ReplaceAll<StringType, Substring, Replacement>`
-
-#### `SliceString<StringType, Start, End>`
-
-#### `Split<StringType, Separator>`
-
-#### `SplitWith<StringType, Separator>`
-
-#### `StrictPath<Type>`
-
-#### `Trim<StringType>`
-
-#### `TrimEnd<StringType>`
-
-#### `TrimStart<StringType>`
-
-#### `Value<Type, PathType>`
-
-### Union
-
-#### `LastType<Type>`
-
-#### `LiteralUnion<Type>`
-
-#### `SymmetricDifference<Type, Type>`
+## Types
+
+- [Aliases](src/aliases)
+	- [`Maybe<T>`](src/aliases/Maybe.ts)
+	- [`Nillable<T>`](src/aliases/Nillable.ts)
+	- [`Nullable<T>`](src/aliases/Nullable.ts)
+- [Array](src/array)
+	- [`Deconstruct<T>`](src/array/Deconstruct.ts)
+	- [`Entries<T>`](src/array/Entries.ts)
+	- [`Filter<T, U>`](src/array/Filter.ts)
+	- [`FixedTuple<T, N>`](src/array/FixedTuple.ts)
+	- [`Flat<T, N>`](src/array/Flat.ts)
+	- [`Head<T>`](src/array/Head.ts)
+	- [`Includes<T, U>`](src/array/Includes.ts)
+	- [`IndexOf<T, U, N>`](src/array/IndexOf.ts)
+	- [`Initial<T>`](src/array/Initial.ts)
+	- [`Join<T, S>`](src/array/Join.ts)
+	- [`Last<T>`](src/array/Last.ts)
+	- [`Push<T, U>`](src/array/Push.ts)
+	- [`Reverse<T>`](src/array/Reverse.ts)
+	- [`Shift<T>`](src/array/Shift.ts)
+	- [`Slice<T, X, Y>`](src/array/Slice.ts)
+	- [`Tail<T>`](src/array/Tail.ts)
+	- [`TupleOf<T>`](src/array/TupleOf.ts)
+	- [`Unshift<T, U>`](src/array/Unshift.ts)
+	- [`Unzip<T>`](src/array/Unzip.ts)
+	- [`Zip<T>`](src/array/Zip.ts)
+- [Common](src/common)
+	- [`CastAs<T, U>`](src/common/CastAs.ts)
+	- [`IsEqual<X, Y>`](src/common/IsEqual.ts)
+	- [`IsAny<T>`](src/common/IsAny.ts)
+	- [`IsNever<T>`](src/common/IsNever.ts)
+	- [`IsTuple<T>`](src/common/IsTuple.ts)
+	- [`Opaque<T, U>`](src/common/Opaque.ts)
+- [Function](src/function)
+	- [`AppendParameter<T, U>`](src/function/AppendParameter.ts)
+	- [`Promisable<T>`](src/function/Promisable.ts)
+	- [`PromiseReturnType<T>`](src/function/PromiseReturnType.ts)
+- [Logical](src/logical)
+	- [`And<X, Y>`](src/logical/And.ts)
+	- [`If<T, X, Y>`](src/logical/If.ts)
+	- [`Nand<X, Y>`](src/logical/Nand.ts)
+	- [`Nor<X, Y>`](src/logical/Nor.ts)
+	- [`Not<T>`](src/logical/Not.ts)
+	- [`Or<X, Y>`](src/logical/Or.ts)
+	- [`Xnor<X, Y>`](src/logical/Xnor.ts)
+	- [`Xor<X, Y>`](src/logical/Xor.ts)
+- [Number](src/number)
+	- [`Absolute<N>`](src/number/Absolute.ts)
+	- [`Add<X, Y>`](src/number/Add.ts)
+	- [`BitAnd<X, Y>`](src/number/BitAnd.ts)
+	- [`BitLeftShift<N>`](src/number/BitLeftShift.ts)
+	- [`BitNot<N>`](src/number/BitNot.ts)
+	- [`BitOr<X, Y>`](src/number/BitOr.ts)
+	- [`BitRightShift<N>`](src/number/BitRightShift.ts)
+	- [`BitXor<X, Y>`](src/number/BitXor.ts)
+	- [`Compare<X, Y>`](src/number/Compare.ts)
+	- [`GreaterThan<X, Y>`](src/number/GreaterThan.ts)
+	- [`IsNegative<N>`](src/number/IsNegative.ts)
+	- [`LessThan<X, Y>`](src/number/LessThan.ts)
+	- [`ParseInt<S>`](src/number/ParseInt.ts)
+	- [`Range<X, Y>`](src/number/Range.ts)
+	- [`Sign<N>`](src/number/Sign.ts)
+	- [`Subtract<X, Y>`](src/number/Subtract.ts)
+- [Object](src/object)
+	- [`Assign<T, U>`](src/object/Assign.ts)
+	- [`Compact<T>`](src/object/Compact.ts)
+	- [`DeepPartial<T>`](src/object/DeepPartial.ts)
+	- [`DeepReadonly<T>`](src/object/DeepReadonly.ts)
+	- [`ExclusiveOr<T, U>`](src/object/ExclusiveOr.ts)
+	- [`Expand<T>`](src/object/Expand.ts)
+	- [`InclusiveOr<T, K>`](src/object/InclusiveOr.ts)
+	- [`IntersectionOf<T>`](src/object/IntersectionOf.ts)
+	- [`Invert<T>`](src/object/Invert.ts)
+	- [`Lookup<T, K>`](src/object/Lookup.ts)
+	- [`Mutable<T>`](src/object/Mutable.ts)
+	- [`NoneOrAll<T>`](src/object/NoneOrAll.ts)
+	- [`OmitAllBy<T, U>`](src/object/OmitAllBy.ts)
+	- [`OmitBy<T, U, K>`](src/object/OmitBy.ts)
+	- [`OmitStrict<T, K>`](src/object/OmitStrict.ts)
+	- [`PickAllBy<T, U>`](src/object/PickAllBy.ts)
+	- [`PickBy<T, U, K>`](src/object/PickBy.ts)
+	- [`PickRequired<T, K>`](src/object/PickRequired.ts)
+	- [`RecordOf<T>`](src/object/RecordOf.ts)
+- [String](src/string)
+	- [`CamelCase<S>`](src/string/CamelCase.ts)
+	- [`ConstantCase<S>`](src/string/ConstantCase.ts)
+	- [`Delimit<S, U>`](src/string/Delimit.ts)
+	- [`Get<T, P>`](src/string/Get.ts)
+	- [`Length<S>`](src/string/Length.ts)
+	- [`PadEnd<S, N, T>`](src/string/PadEnd.ts)
+	- [`PadStart<S, N, T>`](src/string/PadStart.ts)
+	- [`PascalCase<S>`](src/string/PascalCase.ts)
+	- [`Path<T>`](src/string/Path.ts)
+	- [`PathParameters<T>`](src/string/PathParameters.ts)
+	- [`Printf<S>`](src/string/Printf.ts)
+	- [`Repeat<S, N>`](src/string/Repeat.ts)
+	- [`Replace<S, T, U>`](src/string/Replace.ts)
+	- [`ReplaceAll<S, T, U>`](src/string/ReplaceAll.ts)
+	- [`SliceString<S, X, Y>`](src/string/SliceString.ts)
+	- [`Split<S, U>`](src/string/Split.ts)
+	- [`SplitWith<S, U>`](src/string/SplitWith.ts)
+	- [`StrictPath<T>`](src/string/StrictPath.ts)
+	- [`Trim<S>`](src/string/Trim.ts)
+	- [`TrimEnd<S>`](src/string/TrimEnd.ts)
+	- [`TrimStart<S>`](src/string/TrimStart.ts)
+- [Union](src/union)
+	- [`ExcludeStrict<T, U>`](src/union/ExcludeStrict.ts)
+	- [`ExtractStrict<T, U>`](src/union/ExtractStrict.ts)
+	- [`IsUnion<T>`](src/union/IsUnion.ts)
+	- [`LastType<T>`](src/union/LastType.ts)
+	- [`LiteralUnion<T>`](src/union/LiteralUnion.ts)
+	- [`Permutate<T>`](src/union/Permutate.ts)
+	- [`SymmetricDifference<T, U>`](src/union/SymmetricDifference.ts)
+	- [`UnionOf<T>`](src/union/UnionOf.ts)
