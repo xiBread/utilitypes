@@ -1,7 +1,7 @@
 type Check<T, U = T> = T extends U ? ([U] extends [T] ? false : true) : never;
 
 /**
- * Returns `true` if `T` is a union type; otherwise, `false`.
+ * Returns `true` if and only if `T` is a union type; otherwise, `false`.
  *
  * @example
  * ```ts

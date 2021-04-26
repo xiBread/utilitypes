@@ -3,9 +3,7 @@
  *
  * @example
  * ```ts
- * const array = ['a', 'b', 'c'] as const;
- *
- * type T0 = UnionOf<typeof array>;
+ * type T0 = UnionOf<['a', 'b', 'c']>;
  * //	^ = type T0 = 'a' | 'b' | 'c'
  *
  * type T1 = UnionOf<{ a: number } & { b: string }>;

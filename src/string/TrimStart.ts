@@ -1,7 +1,7 @@
 import type { Whitespace } from '../aliases';
 
 /**
- * Removes whitespace from the start of a string.
+ * Removes whitespace from the start of `S`.
  *
  * @example
  * ```ts
