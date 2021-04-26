@@ -9,4 +9,13 @@ type Split<
 	? Split<R, [unknown, ...T]>
 	: T;
 
+/**
+ * Returns the length of `S`.
+ *
+ * @example
+ * ```ts
+ * type T0 = Length<'Lorem ipsum'>;
+ * //	^ = type T0 = 11
+ * ```
+ */
 export type Length<S extends string> = Split<S>['length'];

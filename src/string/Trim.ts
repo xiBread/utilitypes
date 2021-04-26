@@ -1,7 +1,7 @@
 import type { ExtendSelf, TrimEnd, TrimStart } from '../';
 
 /**
- * Removes whitespace from both ends of a string.
+ * Removes whitespace from both ends of `S`.
  *
  * @example
  * ```ts

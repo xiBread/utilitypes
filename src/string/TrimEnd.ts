@@ -1,7 +1,7 @@
 import type { Whitespace } from '../';
 
 /**
- * Removes whitespace from the end of a string.
+ * Removes whitespace from the end of `S`.
  *
  * @example
  * ```ts

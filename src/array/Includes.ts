@@ -1,5 +1,5 @@
 /**
- * Returns a boolean if `U` is included in `T`.
+ * Returns `true` if and only if `U` is included in `T`; otherwise, `false`.
  *
  * @example
  * ```ts
