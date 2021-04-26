@@ -7,4 +7,4 @@
  * //	^ = type T0 = 1
  * ```
  */
-export type Head<T extends unknown[]> = T extends [infer F, ...infer R] ? F : [];
+export type Head<T extends readonly unknown[]> = T extends readonly [infer F, ...unknown[]] ? F : [];

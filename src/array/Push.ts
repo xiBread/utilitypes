@@ -10,4 +10,4 @@
  * //	^ = type T1 = [1, 2, 3, 4, 5, 6];
  * ```
  */
-export type Push<T extends unknown[], U> = U extends unknown[] ? [...T, ...U] : [...T, U];
+export type Push<T extends readonly unknown[], U> = U extends readonly unknown[] ? [...T, ...U] : [...T, U];

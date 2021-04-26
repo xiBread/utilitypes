@@ -12,9 +12,9 @@ import type { LiteralPrimitive, Tail } from '../';
  * //	^ = type T1 = "some-long-word"
  * ```
  */
-export type Join<T extends unknown[], S extends string = ','> = T extends []
+export type Join<T extends readonly unknown[], S extends string = ','> = T extends readonly []
 	? ''
-	: T extends [infer U]
+	: T extends readonly [infer U]
 	? U
 	: T[0] extends LiteralPrimitive
 	? `${T[0]}${S}${Join<Tail<T>, S>}`

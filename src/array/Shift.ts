@@ -7,4 +7,4 @@
  * //	^ = type T0 = 1
  * ```
  */
-export type Shift<T extends unknown[]> = T extends [infer U, ...infer R] ? U : never;
+export type Shift<T extends readonly unknown[]> = T extends readonly [infer U, ...unknown[]] ? U : never;

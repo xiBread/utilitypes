@@ -12,4 +12,4 @@ type Permutation<T, K = T> = [T] extends [never] ? [] : K extends K ? [K, ...Per
  * //	^ = type T1 = [1, 2, 3] | [1, 3, 2] | [3, 1, 2] | [3, 2, 1] | [2, 1, 3] | [2, 3, 1]
  * ```
  */
-export type Permutate<T> = Permutation<T extends unknown[] ? T[number] : T>;
+export type Permutate<T> = Permutation<T extends readonly unknown[] ? T[number] : T>;
