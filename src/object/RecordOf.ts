@@ -1,4 +1,4 @@
-type MapArray<T extends unknown[]> = { [K in { [K in keyof T]: K }[number]]: T[K] };
+type MapArray<T extends readonly unknown[]> = { [K in { [K in keyof T]: K }[number]]: T[K] };
 
 /**
  * Constructs an object type from either a union or array type.
@@ -29,7 +29,7 @@ type MapArray<T extends unknown[]> = { [K in { [K in keyof T]: K }[number]]: T[K
  */
 export type RecordOf<T> = T extends PropertyKey
 	? { [K in T]: K }
-	: T extends PropertyKey[]
+	: T extends readonly PropertyKey[]
 	? MapArray<T>
 	: T extends Record<PropertyKey, unknown>
 	? T

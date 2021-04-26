@@ -7,7 +7,7 @@
  * //	^ = type T0 = [1, 2, 3, 4]
  * ```
  */
-export type Filter<T extends unknown[], U> = T extends [infer F, ...infer R]
+export type Filter<T extends readonly unknown[], U> = T extends readonly [infer F, ...infer R]
 	? F extends U
 		? Filter<R, U>
 		: [F, ...Filter<R, U>]

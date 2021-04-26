@@ -1,6 +1,6 @@
 import type { Invert, Range, RecordOf, TupleOf } from '../';
 
-type MapArray<T extends unknown[], N extends number> = Invert<
+type MapArray<T extends readonly unknown[], N extends number> = Invert<
 	Omit<RecordOf<T>, N extends 0 ? '' : number extends N ? '' : `${Range<0, N>}`>
 >;
 
@@ -21,7 +21,7 @@ type MapArray<T extends unknown[], N extends number> = Invert<
  * //	^ = type T2 = "-1"
  * ```
  */
-export type IndexOf<T extends unknown[], U, N extends number = 0> = MapArray<T, N> extends infer K
+export type IndexOf<T extends readonly unknown[], U, N extends number = 0> = MapArray<T, N> extends infer K
 	? U extends keyof K
 		? TupleOf<K[U]>[0]
 		: '-1'

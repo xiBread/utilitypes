@@ -1,14 +1,14 @@
 import type { Add } from '../';
 
-type Concat<T extends unknown[], U extends unknown[], N extends number> = T['length'] extends N
+type Concat<T extends readonly unknown[], U extends unknown[], N extends number> = T['length'] extends N
 	? U
 	: Concat<T, T[N] extends unknown[] ? [...U, ...T[N]] : [...U, T[N]], Add<N, 1>>;
 
-type Recurse<T extends unknown[], N extends number, U extends number = 0> = U extends N
+type Recurse<T extends readonly unknown[], N extends number, U extends number = 0> = U extends N
 	? T
 	: Recurse<Concat<T, [], 0>, N, Add<U, 1>>;
 
-type Flatten<T extends unknown[]> = T extends [infer F, ...infer R]
+type Flatten<T extends readonly unknown[]> = T extends readonly [infer F, ...infer R]
 	? F extends unknown[]
 		? [...Flatten<F>, ...Flatten<R>]
 		: [F, ...Flatten<R>]
@@ -29,7 +29,7 @@ type Flatten<T extends unknown[]> = T extends [infer F, ...infer R]
  * //	^ = type T2 = [0, 1, [2], 3, [4, [5]], 6, 7, 8]
  * ```
  */
-export type Flat<T extends unknown[], N extends void | number = 1> = N extends void
+export type Flat<T extends readonly unknown[], N extends void | number = 1> = N extends void
 	? Flatten<T>
 	: N extends number
 	? N extends 0

@@ -7,4 +7,4 @@
  * //	^ = type T0 = [3, 2, 1]
  * ```
  */
-export type Reverse<T extends unknown[]> = T extends [infer F, ...infer R] ? [...Reverse<R>, F] : [];
+export type Reverse<T extends readonly unknown[]> = T extends readonly [infer F, ...infer R] ? [...Reverse<R>, F] : [];

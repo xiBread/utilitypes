@@ -12,7 +12,7 @@
  * //	^ = type T1 = false
  * ```
  */
-export type Includes<T extends unknown[], U> = T extends [infer F, ...infer R]
+export type Includes<T extends readonly unknown[], U> = T extends readonly [infer F, ...infer R]
 	? F extends U
 		? true
 		: Includes<R, U>

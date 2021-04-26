@@ -7,4 +7,4 @@
  * //	^ = type T0 = 5
  * ```
  */
-export type Last<T extends unknown[]> = T extends [...infer F, infer R] ? R : [];
+export type Last<T extends readonly unknown[]> = T extends readonly [...unknown[], infer R] ? R : [];

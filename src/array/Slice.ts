@@ -1,7 +1,7 @@
 import type { Absolute, Sign } from '../';
 
-type Start<T extends unknown[], N extends number, U = T> = Sign<N> extends -1
-	? T extends [infer F, ...infer R]
+type Start<T extends readonly unknown[], N extends number, U = T> = Sign<N> extends -1
+	? T extends readonly [infer F, ...infer R]
 		? R['length'] extends Absolute<N>
 			? [F]
 			: Start<R, N> extends infer R
@@ -14,13 +14,13 @@ type Start<T extends unknown[], N extends number, U = T> = Sign<N> extends -1
 		: []
 	: T['length'] extends N
 	? T
-	: T extends []
+	: T extends readonly []
 	? U
-	: T extends [...infer F, unknown]
+	: T extends readonly [...infer F, unknown]
 	? Start<F, N, U>
 	: never;
 
-type End<T extends unknown[], N extends number> = T extends [...Start<T, N>, ...infer R] ? R : never;
+type End<T extends readonly unknown[], N extends number> = T extends readonly [...Start<T, N>, ...infer R] ? R : never;
 
 /**
  * Constructs an array type by selecting each element in `T` from `X` to but not including `Y`.
@@ -41,10 +41,8 @@ type End<T extends unknown[], N extends number> = T extends [...Start<T, N>, ...
  * type T3 = Slice<Animals, -4, -1>;
  * //	^ = type T3 = ["bison", "camel", "duck"]
  */
-export type Slice<T extends unknown[], X extends number = 0, Y extends number = T['length']> = T extends [
-	...Start<T, X>,
-	...infer U,
-	...End<T, Y>
-]
-	? U
-	: [];
+export type Slice<
+	T extends readonly unknown[],
+	X extends number = 0,
+	Y extends number = T['length']
+> = T extends readonly [...Start<T, X>, ...infer U, ...End<T, Y>] ? U : [];

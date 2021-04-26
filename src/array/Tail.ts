@@ -7,4 +7,4 @@
  * //	^ = type T0 = [2, 3, 4, 5]
  * ```
  */
-export type Tail<T extends unknown[]> = T extends [infer F, ...infer R] ? R : [];
+export type Tail<T extends readonly unknown[]> = T extends readonly [unknown, ...infer R] ? R : [];

@@ -32,8 +32,8 @@ type Merge<T, U> = Expand<Omit<T, Extract<keyof T, keyof U>>> & U;
  * //		}
  * ```
  */
-export type Assign<T, U> = U extends [] | {}
+export type Assign<T, U> = U extends readonly [] | {}
 	? T
-	: U extends [infer F, ...infer R]
+	: U extends readonly [infer F, ...infer R]
 	? Assign<Merge<T, F>, R>
 	: Merge<T, U>;

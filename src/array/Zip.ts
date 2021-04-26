@@ -1,6 +1,6 @@
 import type { ExtendSelf, Push } from '../';
 
-type Populate<T extends [unknown[], unknown[]], U extends unknown[]> = T extends [
+type Populate<T extends readonly [unknown[], unknown[]], U extends unknown[]> = T extends readonly [
 	[infer A, ...infer B],
 	[infer X, ...infer Y]
 ]
@@ -20,4 +20,4 @@ type Populate<T extends [unknown[], unknown[]], U extends unknown[]> = T extends
  * //	^ = type T1 = [[1, 9], [2, 8]]
  * ```
  */
-export type Zip<T extends [unknown[], unknown[]]> = ExtendSelf<T, Populate<T, []>>;
+export type Zip<T extends readonly [unknown[], unknown[]]> = ExtendSelf<T, Populate<T, []>>;

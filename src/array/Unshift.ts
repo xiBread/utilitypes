@@ -10,4 +10,4 @@
  * //	^ = type T1 = [-2, -1, 0, 1, 2, 3];
  * ```
  */
-export type Unshift<T extends unknown[], U> = U extends unknown[] ? [...U, ...T] : [U, ...T];
+export type Unshift<T extends readonly unknown[], U> = U extends readonly unknown[] ? [...U, ...T] : [U, ...T];
