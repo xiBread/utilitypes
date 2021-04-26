@@ -1,3 +1,3 @@
-import type { FixedTuple, Slice } from '../';
+import type { Slice, Tuple } from '../';
 
-export type Subtract<X extends number, Y extends number> = Slice<FixedTuple<unknown, X>, Y>['length'] & number;
+export type Subtract<X extends number, Y extends number> = Slice<Tuple<unknown, X>, Y>['length'] & number;

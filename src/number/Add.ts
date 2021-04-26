@@ -1,4 +1,3 @@
-import type { FixedTuple } from '../';
+import type { Tuple } from '../';
 
-export type Add<X extends number, Y extends number> = [...FixedTuple<unknown, X>, ...FixedTuple<unknown, Y>]['length'] &
-	number;
+export type Add<X extends number, Y extends number> = [...Tuple<unknown, X>, ...Tuple<unknown, Y>]['length'] & number;
