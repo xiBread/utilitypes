@@ -10,7 +10,7 @@ type Concat<N extends number, R extends never[][], B extends never[]> = B['lengt
 
 type Replace<T, U> = { [K in keyof T]: U };
 
-type Tuple<T, N extends number> = {
+type Build<T, N extends number> = {
 	[K in N]: Populate<K, [[never]]> extends infer U
 		? U extends never[][]
 			? Replace<Concat<K, U, []>, T>
@@ -23,8 +23,8 @@ type Tuple<T, N extends number> = {
  *
  * @example
  * ```ts
- * type T0 = FixedTuple<number, 3>;
+ * type T0 = Tuple<number, 3>;
  * //	^ = type T0 = [number, number, number]
  * ```
  */
-export type FixedTuple<T, N extends number> = number extends N ? T[] : Tuple<T, N>;
+export type Tuple<T, N extends number> = number extends N ? T[] : Build<T, N>;

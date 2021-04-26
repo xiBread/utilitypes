@@ -1,4 +1,4 @@
-import type { FixedTuple, Join } from '../';
+import type { Join, Tuple } from '../';
 
 /**
  * Constructs a string from `S` containing `N` copies concatenated together.
@@ -9,4 +9,4 @@ import type { FixedTuple, Join } from '../';
  * //	^ = type T0 = 'HiHiHiHiHi'
  * ```
  */
-export type Repeat<S extends string, N extends number> = Join<FixedTuple<S, N>, ''>;
+export type Repeat<S extends string, N extends number> = Join<Tuple<S, N>, ''>;

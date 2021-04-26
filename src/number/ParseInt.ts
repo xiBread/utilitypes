@@ -1,23 +1,23 @@
-import type { FixedTuple, Flat } from '../';
+import type { Flat, Tuple } from '../';
 
 type DigitMapping = {
 	'0': [];
 	'1': [unknown];
 	'2': [unknown, unknown];
-	'3': FixedTuple<unknown, 3>;
-	'4': FixedTuple<unknown, 4>;
-	'5': FixedTuple<unknown, 5>;
-	'6': FixedTuple<unknown, 6>;
-	'7': FixedTuple<unknown, 7>;
-	'8': FixedTuple<unknown, 8>;
-	'9': FixedTuple<unknown, 9>;
+	'3': Tuple<unknown, 3>;
+	'4': Tuple<unknown, 4>;
+	'5': Tuple<unknown, 5>;
+	'6': Tuple<unknown, 6>;
+	'7': Tuple<unknown, 7>;
+	'8': Tuple<unknown, 8>;
+	'9': Tuple<unknown, 9>;
 };
 
 type Transform<S extends string, U extends unknown[] = []> = S extends keyof DigitMapping
-	? [...Flat<FixedTuple<U, 10>>, ...DigitMapping[S]]
+	? [...Flat<Tuple<U, 10>>, ...DigitMapping[S]]
 	: S extends `${infer F}${infer R}`
 	? F extends keyof DigitMapping
-		? Transform<R, [...Flat<FixedTuple<U, 10>>, ...DigitMapping[F]]>
+		? Transform<R, [...Flat<Tuple<U, 10>>, ...DigitMapping[F]]>
 		: never
 	: never;
 

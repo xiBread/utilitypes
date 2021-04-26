@@ -1,6 +1,6 @@
-import type { FixedTuple } from '../';
+import type { Tuple } from '../';
 
-type Length<N extends number> = Partial<FixedTuple<unknown, N>>['length'];
+type Length<N extends number> = Partial<Tuple<unknown, N>>['length'];
 
 /**
  * Constructs a union type of each number from `X` to `Y`.
