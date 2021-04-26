@@ -17,8 +17,3 @@ export type Values<T, U> = { [K in keyof T]: T[K] extends U ? K : never }[keyof 
  * @internal
  */
 export type ExtendSelf<T, U> = T extends T ? U : never;
-
-/**
- * @internal
- */
-export type Delimiter = '-' | '_' | ' ';

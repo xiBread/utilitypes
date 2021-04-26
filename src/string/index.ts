@@ -19,3 +19,8 @@ export * from './StrictPath';
 export * from './Trim';
 export * from './TrimEnd';
 export * from './TrimStart';
+
+/**
+ * @internal
+ */
+export type Delimiter = '-' | '_' | ' ';
