@@ -4,6 +4,7 @@ export * from './DeepPartial';
 export * from './DeepReadonly';
 export * from './ExclusiveOr';
 export * from './Expand';
+export * from './ExtractRequired';
 export * from './InclusiveOr';
 export * from './IntersectionOf';
 export * from './Invert';
