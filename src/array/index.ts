@@ -1,3 +1,4 @@
+export * from './Chunk';
 export * from './Deconstruct';
 export * from './Entries';
 export * from './Filter';
