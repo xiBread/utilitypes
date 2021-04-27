@@ -2,6 +2,7 @@ export * from './Assign';
 export * from './Compact';
 export * from './DeepPartial';
 export * from './DeepReadonly';
+export * from './Entries';
 export * from './ExclusiveOr';
 export * from './Expand';
 export * from './ExtractReadonly';
