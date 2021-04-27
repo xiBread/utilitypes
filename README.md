@@ -16,6 +16,7 @@ Yet another utility type library.
 	- [`UppercaseCharacter`](src/aliases/UppercaseCharacter.ts)
 	- [`Whitespace`](src/aliases/Whitespace.ts)
 - [Array](src/array)
+	- [`Chunk<T, N>`](src/array/Chunk.ts)
 	- [`Deconstruct<T>`](src/array/Deconstruct.ts)
 	- [`Entries<T>`](src/array/Entries.ts)
 	- [`Filter<T, U>`](src/array/Filter.ts)
