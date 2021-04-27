@@ -8,6 +8,7 @@ export * from './ExtractRequired';
 export * from './InclusiveOr';
 export * from './IntersectionOf';
 export * from './Invert';
+export * from './KeyBy';
 export * from './Lookup';
 export * from './Mutable';
 export * from './NoneOrAll';
