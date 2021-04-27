@@ -1,6 +1,6 @@
-import type { Values } from '../';
+import type { KeyBy } from '../';
 
 /**
- * Constructs a type by picking all properties from `T` and then removing `K` based on `U`.
+ * Constructs a type by omitting `K` based on `U` from `T`.
  */
-export type OmitBy<T, U, K extends Values<T, U>> = Omit<T, K>;
+export type OmitBy<T, U, K extends KeyBy<T, U>> = Omit<T, K>;

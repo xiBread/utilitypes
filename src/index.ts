@@ -11,9 +11,4 @@ export * from './union';
 /**
  * @internal
  */
-export type Values<T, U> = { [K in keyof T]: T[K] extends U ? K : never }[keyof T];
-
-/**
- * @internal
- */
 export type ExtendSelf<T, U> = T extends T ? U : never;
