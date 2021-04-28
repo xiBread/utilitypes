@@ -1,12 +1,19 @@
 import { readFile, writeFile } from 'fs/promises';
 import { basename, dirname, parse } from 'path';
 import readdirp from 'readdirp';
-import {
-	createProgram,
-	forEachChild,
-	isTypeAliasDeclaration,
-	Node,
-} from 'typescript';
+import { createProgram, forEachChild, isTypeAliasDeclaration, Node } from 'typescript';
+
+const colors = new Map([
+	['Aliases', ['626685', '97DAC8']],
+	['Array', ['5877BC', 'F48995']],
+	['Common', ['F8BB7C', 'A6EDF0']],
+	['Function', ['FEDD9E', 'D9718B']],
+	['Logical', ['71C7AF', '5D4231']],
+	['Number', ['E52935', '59CBE8']],
+	['Object', ['F76385', '3F3A81']],
+	['String', ['32DE84', '191919']],
+	['Union', ['A1A0D2', '363C44']]
+]);
 
 (async () => {
 	const categories = new Map<string, [string, string][]>();
@@ -56,6 +63,17 @@ import {
 
 	const start = lines.findIndex((line) => line.startsWith('## Types'));
 	const section = lines.slice(0, start + 2);
+
+	let badges = '';
+
+	[...categories.keys()].map((category) => {
+		const [color, labelColor] = colors.get(category);
+		const types = categories.get(category);
+
+		badges += `![#](https://img.shields.io/badge/${types.length}-${category}-${color}?style=for-the-badge&labelColor=${labelColor})\n`;
+	});
+
+	section.push(badges);
 
 	for (let [category, type] of categories) {
 		category = `- [${category}](src/${category.toLowerCase()})`;
