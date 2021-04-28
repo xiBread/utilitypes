@@ -1,5 +1,4 @@
-import { Tail } from '../array';
-import { Operands } from './';
+import type { Operands, Tail } from '../';
 
 /**
  * Returns `true` if and only if either `X` or `Y`, or both, are `true`; otherwise, `false`.

@@ -1,4 +1,4 @@
-import { Operands } from './';
+import type { Operands } from '../';
 
 /**
  * Returns `true` if and only if `X` and `Y` differ from each other; otherwise, `false`.
