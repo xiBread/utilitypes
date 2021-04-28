@@ -13,5 +13,6 @@ type Check<T, U = T> = T extends U ? ([U] extends [T] ? false : true) : never;
  *
  * type T2 = IsUnion<[boolean | object]>;
  * //	^ = type T2 = false
+ * ```
  */
 export type IsUnion<T> = Check<T>;

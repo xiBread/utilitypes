@@ -17,7 +17,7 @@ type Or<X, Y> = [X, Y] extends ['0', '0']
  * @example
  * ```ts
  * type T0 = BitOr<'0101', '0001'>;
- * //	^ = type T0 = '0111'
+ * //	^ = type T0 = "0111"
  * ```
  */
 export type BitOr<X, Y> = ExtendSelf<X, Or<X, Y>>;

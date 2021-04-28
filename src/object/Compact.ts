@@ -2,7 +2,7 @@
  * Displays an intersection type as an object when hovering over a symbol.
  *
  * @example
- * ```
+ * ```ts
  * type Intersection = { a: string } & { b: number };
  *
  * type T0 = Intersection;

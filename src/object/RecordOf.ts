@@ -9,7 +9,7 @@ type MapArray<T extends readonly unknown[]> = { [K in { [K in keyof T]: K }[numb
  * be the indice's respective element.
  *
  * @example
- * ```
+ * ```ts
  * type T0 = RecordOf<'a' | 'b' | 'c'>;
  * //	^ = type T0 = {
  * //			a: "a";

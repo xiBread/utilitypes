@@ -17,7 +17,7 @@ type And<X, Y> = [X, Y] extends ['0', '0'] | ['0', '1'] | ['1', '0']
  * @example
  * ```ts
  * type T0 = BitAnd<'0101', '0011'>;
- * //	^ = type T0 = '0001'
+ * //	^ = type T0 = "0001"
  * ```
  */
 export type BitAnd<X, Y> = ExtendSelf<X, And<X, Y>>;

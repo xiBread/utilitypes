@@ -10,6 +10,7 @@
  * //			2: "b";
  * //			3: "c";
  * //		}
+ * ```
  */
 export type Invert<T extends Record<PropertyKey, any>> = {
 	[V in T[keyof T]]: {

@@ -40,6 +40,7 @@ type End<T extends readonly unknown[], N extends number> = T extends readonly [.
 
  * type T3 = Slice<Animals, -4, -1>;
  * //	^ = type T3 = ["bison", "camel", "duck"]
+ * ```
  */
 export type Slice<
 	T extends readonly unknown[],

@@ -4,7 +4,8 @@
  * @example
  * ```ts
  * type T0 = BitNot<'0000000000000101'>;
- * //	^ = type T0 = '1111111111111010'
+ * //	^ = type T0 = "1111111111111010"
+ * ```
  */
 export type BitNot<N> = N extends '0'
 	? '1'

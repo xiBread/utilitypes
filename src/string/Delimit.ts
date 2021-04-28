@@ -26,6 +26,7 @@ type Join<T extends unknown[], U extends string> = T extends [`${infer F}`, ...i
  *
  * type T1 = Delimit<'hello world', '_'>;
  * //	^ = type T1 = 'hello_world'
+ * ```
  */
 export type Delimit<S extends string, U extends string = '-'> = string extends U
 	? S
