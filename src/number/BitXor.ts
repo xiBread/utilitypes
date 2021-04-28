@@ -7,6 +7,7 @@ import type { BitAnd, BitNot, BitOr } from '../';
  * @example
  * ```ts
  * type T0 = BitXor<'0101', '0011'>;
- * //	^ = type T0 = '0110'
+ * //	^ = type T0 = "0110"
+ * ```
  */
 export type BitXor<X, Y> = BitOr<BitAnd<X, BitNot<Y>>, BitAnd<BitNot<X>, Y>>;

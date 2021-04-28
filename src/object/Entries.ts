@@ -10,6 +10,7 @@ import type { RecordOf, TupleOf, Zip } from '../';
  *
  * type T1 = Entries<['a', 'b', 'c']>;
  * //	^ = type T1 = [["0", "a"], ["1", "b"], ["2", "c"]]
+ * ```
  */
 export type Entries<T> = T extends readonly unknown[]
 	? Entries<RecordOf<T>>

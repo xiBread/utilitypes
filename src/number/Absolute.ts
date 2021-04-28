@@ -10,6 +10,7 @@ import type { ParseInt } from '../';
  *
  * type T1 = Absolute<1642>;
  * //	^ = type T1 = 1642
+ * ```
  */
 export type Absolute<N extends number> = `${N}` extends `-${infer T}`
 	? T extends `${number}`
