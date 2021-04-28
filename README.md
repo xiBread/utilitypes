@@ -1,8 +1,25 @@
 # Extended Utility Types
 
-Yet another utility type library.
+A library with over 100 utility types to empower your TypeScript projects.
+
+### Install
+
+```sh
+npm i -D extended-utility-types
+# Requires TypeScript >= 4.1
+```
 
 ## Types
+
+![#](https://img.shields.io/badge/10-Aliases-626685?style=for-the-badge&labelColor=97DAC8)
+![#](https://img.shields.io/badge/20-Array-5877BC?style=for-the-badge&labelColor=F48995)
+![#](https://img.shields.io/badge/6-Common-F8BB7C?style=for-the-badge&labelColor=A6EDF0)
+![#](https://img.shields.io/badge/4-Function-FEDD9E?style=for-the-badge&labelColor=D9718B)
+![#](https://img.shields.io/badge/8-Logical-71C7AF?style=for-the-badge&labelColor=5D4231)
+![#](https://img.shields.io/badge/16-Number-E52935?style=for-the-badge&labelColor=59CBE8)
+![#](https://img.shields.io/badge/26-Object-F76385?style=for-the-badge&labelColor=3F3A81)
+![#](https://img.shields.io/badge/21-String-32DE84?style=for-the-badge&labelColor=191919)
+![#](https://img.shields.io/badge/8-Union-A1A0D2?style=for-the-badge&labelColor=363C44)
 
 - [Aliases](src/aliases)
 	- [`LiteralPrimitive`](src/aliases/LiteralPrimitive.ts)
@@ -18,7 +35,6 @@ Yet another utility type library.
 - [Array](src/array)
 	- [`Chunk<T, N>`](src/array/Chunk.ts)
 	- [`Deconstruct<T>`](src/array/Deconstruct.ts)
-	- [`Entries<T>`](src/array/Entries.ts)
 	- [`Filter<T, U>`](src/array/Filter.ts)
 	- [`Flat<T, N>`](src/array/Flat.ts)
 	- [`Head<T>`](src/array/Head.ts)
@@ -80,19 +96,26 @@ Yet another utility type library.
 	- [`Compact<T>`](src/object/Compact.ts)
 	- [`DeepPartial<T>`](src/object/DeepPartial.ts)
 	- [`DeepReadonly<T>`](src/object/DeepReadonly.ts)
+	- [`Entries<T>`](src/object/Entries.ts)
+	- [`EnumOf<T, U>`](src/object/EnumOf.ts)
 	- [`ExclusiveOr<T, U>`](src/object/ExclusiveOr.ts)
 	- [`Expand<T>`](src/object/Expand.ts)
+	- [`ExtractReadonly<T>`](src/object/ExtractReadonly.ts)
+	- [`ExtractRequired<T>`](src/object/ExtractRequired.ts)
 	- [`InclusiveOr<T, K>`](src/object/InclusiveOr.ts)
 	- [`IntersectionOf<T>`](src/object/IntersectionOf.ts)
 	- [`Invert<T>`](src/object/Invert.ts)
+	- [`KeyBy<T, U>`](src/object/KeyBy.ts)
 	- [`Lookup<T, K>`](src/object/Lookup.ts)
 	- [`Mutable<T>`](src/object/Mutable.ts)
 	- [`NoneOrAll<T>`](src/object/NoneOrAll.ts)
 	- [`OmitAllBy<T, U>`](src/object/OmitAllBy.ts)
 	- [`OmitBy<T, U, K>`](src/object/OmitBy.ts)
+	- [`OmitDeep<T, K>`](src/object/OmitDeep.ts)
 	- [`OmitStrict<T, K>`](src/object/OmitStrict.ts)
 	- [`PickAllBy<T, U>`](src/object/PickAllBy.ts)
 	- [`PickBy<T, U, K>`](src/object/PickBy.ts)
+	- [`PickDeep<T, K>`](src/object/PickDeep.ts)
 	- [`PickRequired<T, K>`](src/object/PickRequired.ts)
 	- [`RecordOf<T>`](src/object/RecordOf.ts)
 - [String](src/string)
