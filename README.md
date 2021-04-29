@@ -1,8 +1,8 @@
 # Extended Utility Types
 
-A library with over 100 utility types to empower your TypeScript projects.
+A library with over 100 utility types to empower TypeScript development.
 
-### Install
+## Install
 
 ```sh
 npm i -D extended-utility-types
@@ -11,17 +11,21 @@ npm i -D extended-utility-types
 
 ## Types
 
-![#](https://img.shields.io/badge/10-Aliases-626685?style=for-the-badge&labelColor=97DAC8)
-![#](https://img.shields.io/badge/20-Array-5877BC?style=for-the-badge&labelColor=F48995)
-![#](https://img.shields.io/badge/6-Common-F8BB7C?style=for-the-badge&labelColor=A6EDF0)
-![#](https://img.shields.io/badge/4-Function-FEDD9E?style=for-the-badge&labelColor=D9718B)
-![#](https://img.shields.io/badge/8-Logical-71C7AF?style=for-the-badge&labelColor=5D4231)
-![#](https://img.shields.io/badge/16-Number-E52935?style=for-the-badge&labelColor=59CBE8)
-![#](https://img.shields.io/badge/26-Object-F76385?style=for-the-badge&labelColor=3F3A81)
-![#](https://img.shields.io/badge/21-String-32DE84?style=for-the-badge&labelColor=191919)
-![#](https://img.shields.io/badge/8-Union-A1A0D2?style=for-the-badge&labelColor=363C44)
+<div align="center">
 
-- [Aliases](src/aliases)
+[![Aliases]](src/aliases)
+[![Array]](src/array)
+[![Common]](src/common)
+[![Function]](src/function)
+[![Logical]](src/logical)
+[![Number]](src/number)
+[![Object]](src/object)
+[![String]](src/string)
+[![Union]](src/union)
+
+</div>
+
+- Aliases
 	- [`LiteralPrimitive`](src/aliases/LiteralPrimitive.ts)
 	- [`LowercaseCharacter`](src/aliases/LowercaseCharacter.ts)
 	- [`Maybe<T>`](src/aliases/Maybe.ts)
@@ -32,7 +36,7 @@ npm i -D extended-utility-types
 	- [`Primitive`](src/aliases/Primitive.ts)
 	- [`UppercaseCharacter`](src/aliases/UppercaseCharacter.ts)
 	- [`Whitespace`](src/aliases/Whitespace.ts)
-- [Array](src/array)
+- Array
 	- [`Chunk<T, N>`](src/array/Chunk.ts)
 	- [`Deconstruct<T>`](src/array/Deconstruct.ts)
 	- [`Filter<T, U>`](src/array/Filter.ts)
@@ -53,19 +57,19 @@ npm i -D extended-utility-types
 	- [`Unshift<T, U>`](src/array/Unshift.ts)
 	- [`Unzip<T>`](src/array/Unzip.ts)
 	- [`Zip<T>`](src/array/Zip.ts)
-- [Common](src/common)
+- Common
 	- [`CastAs<T, U>`](src/common/CastAs.ts)
 	- [`IsEqual<X, Y>`](src/common/IsEqual.ts)
 	- [`IsAny<T>`](src/common/IsAny.ts)
 	- [`IsNever<T>`](src/common/IsNever.ts)
 	- [`IsTuple<T>`](src/common/IsTuple.ts)
 	- [`Opaque<T, U>`](src/common/Opaque.ts)
-- [Function](src/function)
+- Function
 	- [`AppendParameter<T, U>`](src/function/AppendParameter.ts)
 	- [`FunctionLike<T>`](src/function/FunctionLike.ts)
 	- [`Promisable<T>`](src/function/Promisable.ts)
 	- [`PromiseReturnType<T>`](src/function/PromiseReturnType.ts)
-- [Logical](src/logical)
+- Logical
 	- [`And<X, Y>`](src/logical/And.ts)
 	- [`If<T, X, Y>`](src/logical/If.ts)
 	- [`Nand<X, Y>`](src/logical/Nand.ts)
@@ -74,7 +78,7 @@ npm i -D extended-utility-types
 	- [`Or<X, Y>`](src/logical/Or.ts)
 	- [`Xnor<X, Y>`](src/logical/Xnor.ts)
 	- [`Xor<X, Y>`](src/logical/Xor.ts)
-- [Number](src/number)
+- Number
 	- [`Absolute<N>`](src/number/Absolute.ts)
 	- [`Add<X, Y>`](src/number/Add.ts)
 	- [`BitAnd<X, Y>`](src/number/BitAnd.ts)
@@ -91,7 +95,7 @@ npm i -D extended-utility-types
 	- [`Range<X, Y>`](src/number/Range.ts)
 	- [`Sign<N>`](src/number/Sign.ts)
 	- [`Subtract<X, Y>`](src/number/Subtract.ts)
-- [Object](src/object)
+- Object
 	- [`Assign<T, U>`](src/object/Assign.ts)
 	- [`Compact<T>`](src/object/Compact.ts)
 	- [`DeepPartial<T>`](src/object/DeepPartial.ts)
@@ -118,7 +122,7 @@ npm i -D extended-utility-types
 	- [`PickDeep<T, K>`](src/object/PickDeep.ts)
 	- [`PickRequired<T, K>`](src/object/PickRequired.ts)
 	- [`RecordOf<T>`](src/object/RecordOf.ts)
-- [String](src/string)
+- String
 	- [`CamelCase<S>`](src/string/CamelCase.ts)
 	- [`ConstantCase<S>`](src/string/ConstantCase.ts)
 	- [`Delimit<S, U>`](src/string/Delimit.ts)
@@ -140,7 +144,7 @@ npm i -D extended-utility-types
 	- [`Trim<S>`](src/string/Trim.ts)
 	- [`TrimEnd<S>`](src/string/TrimEnd.ts)
 	- [`TrimStart<S>`](src/string/TrimStart.ts)
-- [Union](src/union)
+- Union
 	- [`ExcludeStrict<T, U>`](src/union/ExcludeStrict.ts)
 	- [`ExtractStrict<T, U>`](src/union/ExtractStrict.ts)
 	- [`IsUnion<T>`](src/union/IsUnion.ts)
@@ -149,3 +153,13 @@ npm i -D extended-utility-types
 	- [`Permutate<T>`](src/union/Permutate.ts)
 	- [`SymmetricDifference<T, U>`](src/union/SymmetricDifference.ts)
 	- [`UnionOf<T>`](src/union/UnionOf.ts)
+
+[Aliases]: https://img.shields.io/badge/10-Aliases-FF9C9F?style=for-the-badge&labelColor=363C44
+[Array]: https://img.shields.io/badge/20-Array-FEC98F?style=for-the-badge&labelColor=363C44
+[Common]: https://img.shields.io/badge/6-Common-FEDD9E?style=for-the-badge&labelColor=363C44
+[Function]: https://img.shields.io/badge/4-Function-B9E9AA?style=for-the-badge&labelColor=363C44
+[Logical]: https://img.shields.io/badge/8-Logical-B9F9E6?style=for-the-badge&labelColor=363C44
+[Number]: https://img.shields.io/badge/16-Number-B1F1F4?style=for-the-badge&labelColor=363C44
+[Object]: https://img.shields.io/badge/26-Object-88C5FF?style=for-the-badge&labelColor=363C44
+[String]: https://img.shields.io/badge/21-String-C7B4E0?style=for-the-badge&labelColor=363C44
+[Union]: https://img.shields.io/badge/8-Union-F8CEEE?style=for-the-badge&labelColor=363C44
