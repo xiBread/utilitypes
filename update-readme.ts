@@ -1,19 +1,24 @@
 import { readFile, writeFile } from 'fs/promises';
 import { basename, dirname, parse } from 'path';
 import readdirp from 'readdirp';
-import { createProgram, forEachChild, isTypeAliasDeclaration, Node } from 'typescript';
+import {
+	createProgram,
+	forEachChild,
+	isTypeAliasDeclaration,
+	Node,
+} from 'typescript';
 
-const colors = new Map([
-	['Aliases', ['626685', '97DAC8']],
-	['Array', ['5877BC', 'F48995']],
-	['Common', ['F8BB7C', 'A6EDF0']],
-	['Function', ['FEDD9E', 'D9718B']],
-	['Logical', ['71C7AF', '5D4231']],
-	['Number', ['E52935', '59CBE8']],
-	['Object', ['F76385', '3F3A81']],
-	['String', ['32DE84', '191919']],
-	['Union', ['A1A0D2', '363C44']]
-]);
+const colors = {
+	Aliases: 'FF9C9F',
+	Array: 'FEC98F',
+	Common: 'FEDD9E',
+	Function: 'B9E9AA',
+	Logical: 'B9F9E6',
+	Number: 'B1F1F4',
+	Object: '88C5FF',
+	String: 'C7B4E0',
+	Union: 'F8CEEE'
+};
 
 (async () => {
 	const categories = new Map<string, [string, string][]>();
@@ -61,29 +66,39 @@ const colors = new Map([
 	const readme = (await readFile('README.md', 'utf8')).toString();
 	const lines = readme.split('\n');
 
-	const start = lines.findIndex((line) => line.startsWith('## Types'));
-	const section = lines.slice(0, start + 2);
+	const start = lines.findIndex((line) => line.startsWith('<div'));
+	lines.splice(start + 2, 9, '{{badges}}');
 
-	let badges = '';
+	const [badges, refs]: [string[], string[]] = [[], []];
+	const keys = [...categories.keys()];
 
-	[...categories.keys()].map((category) => {
-		const [color, labelColor] = colors.get(category);
-		const types = categories.get(category);
+	keys.map((category) => void badges.push(`[![${category}]](src/${category.toLowerCase()})`));
 
-		badges += `![#](https://img.shields.io/badge/${types.length}-${category}-${color}?style=for-the-badge&labelColor=${labelColor})\n`;
-	});
+	const template = lines.findIndex((line) => line === '{{badges}}');
+	lines.splice(template, 1, badges.join('\n'));
 
-	section.push(badges);
+	const end = lines.findIndex((line) => line === '</div>');
+	lines.splice(end + 2);
 
-	for (let [category, type] of categories) {
-		category = `- [${category}](src/${category.toLowerCase()})`;
+	for (const [category, type] of categories) {
+		let list = `- ${category}`;
 
 		for (const [name, link] of type) {
-			category += `\n\t- [\`${name}\`](${link})`;
+			list += `\n\t- [\`${name}\`](${link})`;
 		}
 
-		section.push(category);
+		lines.push(list);
 	}
 
-	writeFile('README.md', `${section.join('\n')}\n`);
+	keys.map((category) => {
+		const types = categories.get(category);
+
+		refs.push(
+			`[${category}]: https://img.shields.io/badge/${types.length}-${category}-${colors[category]}?style=for-the-badge&labelColor=363C44`
+		);
+	});
+
+	lines.push(`\n${refs.join('\n')}`);
+
+	writeFile('README.md', `${lines.join('\n')}\n`);
 })();
