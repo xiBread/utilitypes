@@ -1,3 +1,4 @@
+export * from './Distribute';
 export * from './ExcludeStrict';
 export * from './ExtractStrict';
 export * from './IsUnion';
