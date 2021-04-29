@@ -1,10 +1,10 @@
-import type { ExtendSelf, Push } from '../';
+import type { ExtendSelf, Push, Tuple } from '../';
 
-type Populate<T extends readonly [unknown, unknown][], U extends [unknown[], unknown[]]> = T extends readonly [
+type Populate<T extends readonly Tuple<unknown, 2>[], U extends [unknown[], unknown[]]> = T extends readonly [
 	[infer X, infer Y],
 	...infer R
 ]
-	? R extends [unknown, unknown][]
+	? R extends Tuple<unknown, 2>[]
 		? Populate<R, [Push<U[0], [X]>, Push<U[1], [Y]>]>
 		: never
 	: U;
@@ -18,4 +18,4 @@ type Populate<T extends readonly [unknown, unknown][], U extends [unknown[], unk
  * //	^ = type T0 = [[1, 2, 3], [9, 8, 7]]
  * ```
  */
-export type Unzip<T extends readonly [unknown, unknown][]> = ExtendSelf<T, Populate<T, [[], []]>>;
+export type Unzip<T extends readonly Tuple<unknown, 2>[]> = ExtendSelf<T, Populate<T, [[], []]>>;
