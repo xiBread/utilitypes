@@ -1,5 +1,4 @@
 export * from './Chunk';
-export * from './Deconstruct';
 export * from './Filter';
 export * from './Flat';
 export * from './Head';
