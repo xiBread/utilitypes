@@ -1,23 +1,14 @@
-import type { Flat, Tuple } from '../';
+import type { Add, Flat, RecordOf, Tuple } from '../';
 
-type DigitMapping = {
-	'0': [];
-	'1': [unknown];
-	'2': [unknown, unknown];
-	'3': Tuple<unknown, 3>;
-	'4': Tuple<unknown, 4>;
-	'5': Tuple<unknown, 5>;
-	'6': Tuple<unknown, 6>;
-	'7': Tuple<unknown, 7>;
-	'8': Tuple<unknown, 8>;
-	'9': Tuple<unknown, 9>;
-};
+type Digit<N extends number = 0, T extends unknown[] = []> = N extends 10
+	? RecordOf<T>
+	: Digit<Add<N, 1>, [...T, Tuple<unknown, N>]>;
 
-type Transform<S extends string, U extends unknown[] = []> = S extends keyof DigitMapping
-	? [...Flat<Tuple<U, 10>>, ...DigitMapping[S]]
+type Transform<S extends string, U extends unknown[] = []> = S extends keyof Digit
+	? [...Flat<Tuple<U, 10>>, ...Digit[S]]
 	: S extends `${infer F}${infer R}`
-	? F extends keyof DigitMapping
-		? Transform<R, [...Flat<Tuple<U, 10>>, ...DigitMapping[F]]>
+	? F extends keyof Digit
+		? Transform<R, [...Flat<Tuple<U, 10>>, ...Digit[F]]>
 		: never
 	: never;
 
