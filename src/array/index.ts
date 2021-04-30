@@ -5,7 +5,7 @@ export * from './Includes';
 export * from './IndexOf';
 export * from './Initial';
 export * from './Join';
-export * from './Last';
+export * from './Pop';
 export * from './Push';
 export * from './Reverse';
 export * from './Shift';
