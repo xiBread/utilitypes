@@ -9,15 +9,15 @@ type MapArray<T extends readonly unknown[], N extends number> = Invert<
  *
  * @example
  * ```ts
- * type Colors = ['green', 'red', 'blue', 'yellow', 'red', 'pink'];
+ * const colors = ['green', 'red', 'blue', 'yellow', 'red', 'pink'] as const;
  *
- * type T0 = IndexOf<Colors, 'red'>;
+ * type T0 = IndexOf<typeof colors, 'red'>;
  * //	^ = type T0 = 1
  *
- * type T1 = IndexOf<Colors, 'red', 3>;
+ * type T1 = IndexOf<typeof colors, 'red', 3>;
  * //	^ = type T1 = 4
  *
- * type T2 = IndexOf<Colors, 'orange'>;
+ * type T2 = IndexOf<typeof colors, 'orange'>;
  * //	^ = type T2 = -1
  * ```
  */

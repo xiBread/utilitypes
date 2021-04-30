@@ -15,7 +15,7 @@ type Flatten<T extends readonly unknown[]> = T extends readonly [infer F, ...inf
 	: [];
 
 /**
- * Constructs an array type with all sub-arrays concatenated up to the specified depth.
+ * Constructs an array type with all sub-arrays in `T` concatenated up to the specified depth.
  *
  * @example
  * ```ts

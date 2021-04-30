@@ -10,7 +10,7 @@ type Populate<T extends readonly Tuple<unknown, 2>[], U extends [unknown[], unkn
 	: U;
 
 /**
- * Constructs a two-dimensional tuple type from each nested pair in `T`.
+ * Constructs a tuple type from each pair in `T`.
  *
  * @example
  * ```ts

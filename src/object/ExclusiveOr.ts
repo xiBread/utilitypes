@@ -5,7 +5,7 @@ type Without<T, U> = { [K in Exclude<keyof T, keyof U>]?: never };
 type XOR<T, U> = T | U extends object ? (Without<T, U> & U) | (Without<U, T> & T) : T | U;
 
 /**
- * Constructs a type by requiring properties of `T` or `U`, but not both together.
+ * Constructs an object type whose property keys and values are required from either `T` or `U`.
  *
  * @example
  * ```ts
@@ -16,7 +16,7 @@ type XOR<T, U> = T | U extends object ? (Without<T, U> & U) | (Without<U, T> & T
  *
  * interface That {
  * 	o: object;
- * 	a: any[];
+ * 	a: boolean[];
  * }
  *
  * type ThisOrThat = ExclusiveOr<This, That>;
