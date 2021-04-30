@@ -38,15 +38,13 @@ npm i -D extended-utility-types
 	- [`Whitespace`](src/aliases/Whitespace.ts)
 - Array
 	- [`Chunk<T, N>`](src/array/Chunk.ts)
-	- [`Deconstruct<T>`](src/array/Deconstruct.ts)
 	- [`Filter<T, U>`](src/array/Filter.ts)
 	- [`Flat<T, N>`](src/array/Flat.ts)
-	- [`Head<T>`](src/array/Head.ts)
 	- [`Includes<T, U>`](src/array/Includes.ts)
 	- [`IndexOf<T, U, N>`](src/array/IndexOf.ts)
 	- [`Initial<T>`](src/array/Initial.ts)
 	- [`Join<T, S>`](src/array/Join.ts)
-	- [`Last<T>`](src/array/Last.ts)
+	- [`Pop<T>`](src/array/Pop.ts)
 	- [`Push<T, U>`](src/array/Push.ts)
 	- [`Reverse<T>`](src/array/Reverse.ts)
 	- [`Shift<T>`](src/array/Shift.ts)
@@ -132,7 +130,7 @@ npm i -D extended-utility-types
 	- [`PadStart<S, N, T>`](src/string/PadStart.ts)
 	- [`PascalCase<S>`](src/string/PascalCase.ts)
 	- [`Path<T>`](src/string/Path.ts)
-	- [`PathParameters<T>`](src/string/PathParameters.ts)
+	- [`PathParameters<S>`](src/string/PathParameters.ts)
 	- [`Printf<S>`](src/string/Printf.ts)
 	- [`Repeat<S, N>`](src/string/Repeat.ts)
 	- [`Replace<S, T, U>`](src/string/Replace.ts)
@@ -149,17 +147,18 @@ npm i -D extended-utility-types
 	- [`ExtractStrict<T, U>`](src/union/ExtractStrict.ts)
 	- [`IsUnion<T>`](src/union/IsUnion.ts)
 	- [`LastType<T>`](src/union/LastType.ts)
-	- [`LiteralUnion<T>`](src/union/LiteralUnion.ts)
+	- [`LiteralUnion<T, U>`](src/union/LiteralUnion.ts)
 	- [`Permutate<T>`](src/union/Permutate.ts)
 	- [`SymmetricDifference<T, U>`](src/union/SymmetricDifference.ts)
 	- [`UnionOf<T>`](src/union/UnionOf.ts)
+	- [`Distribute<T>`](src/union/Distribute.ts)
 
 [Aliases]: https://img.shields.io/badge/10-Aliases-FF9C9F?style=for-the-badge&labelColor=363C44
-[Array]: https://img.shields.io/badge/20-Array-FEC98F?style=for-the-badge&labelColor=363C44
+[Array]: https://img.shields.io/badge/18-Array-FEC98F?style=for-the-badge&labelColor=363C44
 [Common]: https://img.shields.io/badge/6-Common-FEDD9E?style=for-the-badge&labelColor=363C44
 [Function]: https://img.shields.io/badge/4-Function-B9E9AA?style=for-the-badge&labelColor=363C44
 [Logical]: https://img.shields.io/badge/8-Logical-B9F9E6?style=for-the-badge&labelColor=363C44
 [Number]: https://img.shields.io/badge/16-Number-B1F1F4?style=for-the-badge&labelColor=363C44
 [Object]: https://img.shields.io/badge/26-Object-88C5FF?style=for-the-badge&labelColor=363C44
 [String]: https://img.shields.io/badge/21-String-C7B4E0?style=for-the-badge&labelColor=363C44
-[Union]: https://img.shields.io/badge/8-Union-F8CEEE?style=for-the-badge&labelColor=363C44
+[Union]: https://img.shields.io/badge/9-Union-F8CEEE?style=for-the-badge&labelColor=363C44
