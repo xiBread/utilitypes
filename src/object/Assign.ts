@@ -3,7 +3,7 @@ import type { Expand } from '../';
 type Merge<T, U> = Expand<Omit<T, Extract<keyof T, keyof U>>> & U;
 
 /**
- * Constructs a type with each property in `U` assigned to `T`.
+ * Constructs an object type with each property in `U` assigned to `T`.
  *
  * @example
  * ```ts

@@ -1,5 +1,5 @@
 /**
- * Constructs a tuple type by filtering `U` from `T`.
+ * Constructs an array type by excluding from `T` those elements that are assignable to `U`.
  *
  * @example
  * ```ts

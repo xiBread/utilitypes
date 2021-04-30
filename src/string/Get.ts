@@ -1,7 +1,25 @@
 import type { Path } from '../';
 
 /**
- * Extracts the type of `P` from `T`.
+ * Constructs a type by extracting the type of `P` from `T`.
+ *
+ * @example
+ * ```ts
+ * const profile = {
+ * 	id: 325710,
+ * 	name: 'John Doe',
+ * 	contact: {
+ * 		number: '662-733-1891',
+ * 		email: {
+ * 			work: 'john.doe@business.com',
+ * 			personal: 'john.doe@gmail.com'
+ * 		}
+ * 	}
+ * } as const
+ *
+ * type T0 = Get<typeof profile, 'contact.email.work'>;
+ * //	^ = type T0 = "john.doe@business.com"
+ * ```
  */
 export type Get<T, P extends Path<T>> = P extends `${infer K}.${infer R}`
 	? K extends keyof T

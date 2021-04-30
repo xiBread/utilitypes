@@ -11,22 +11,19 @@ type PathString<T, K extends keyof T> = K extends string
  *
  * @example
  * ```ts
- * const o = {
- * 	a: 1,
+ * interface Nested {
+ * 	a: string;
  * 	b: {
- * 		c: {
- * 			d: 2
- * 		},
- * 		f: 3
+ * 		c: number;
+ * 		d: {
+ * 			e: boolean;
+ * 		}
  * 	}
+ * 	f: bigint
  * }
  *
- * declare function f1<T extends StrictPath<typeof o>>(path: T): void;
- *
- * f1('a');
- * f1('b.c.d');
- * f1('b.c');
- * //	^ Argument of type '"b.c"' is not assignable to parameter of type '"a" | "b.f" | "b.c.d"'.
+ * type T0 = StrictPath<Nested>;
+ * //	^ = type T0 = "a" | "f" | "b.c" | "b.d.e"
  * ```
  */
 export type StrictPath<T> = ExtendSelf<T, PathString<T, keyof T>>;

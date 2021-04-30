@@ -8,8 +8,8 @@ type Populate<T extends readonly [unknown[], unknown[]], U extends unknown[]> = 
 	: U;
 
 /**
- * Constructs a nested tuple type, each containing a pair of elements from `T` occuring at the same
- * index.
+ * Constructs an array type whose elements are tuples containing a pair of elements from `T`
+ * occuring at the same index.
  *
  * @example
  * ```ts

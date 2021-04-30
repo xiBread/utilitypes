@@ -1,5 +1,5 @@
 /**
- * Constructs a type by reversing the order of each element in `T`.
+ * Constructs an array type by reversing the order of each element in `T`.
  *
  * @example
  * ```ts

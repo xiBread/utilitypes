@@ -1,7 +1,7 @@
 import type { LastType, Push } from '../';
 
 /**
- * Constructs a tuple type from each member in a union type.
+ * Constructs a tuple type from each member of `T`.
  *
  * @example
  * ```ts

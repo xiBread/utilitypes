@@ -1,5 +1,5 @@
 /**
- * Constructs a tuple type by prepending `U` to `T`.
+ * Constructs an array type by prepending `U` to `T`.
  *
  * @example
  * ```ts

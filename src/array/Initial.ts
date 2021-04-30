@@ -1,5 +1,5 @@
 /**
- * Constructs a type by picking every element in tuple `T` except the last.
+ * Constructs an array type by excluding the last element in `T`.
  *
  * @example
  * ```ts

@@ -19,7 +19,7 @@ type Build<T, N extends number> = {
 }[N];
 
 /**
- * Constructs a tuple type from `T` with a fixed length of `N`.
+ * Constructs a tuple type of `T` with a length of `N`.
  *
  * @example
  * ```ts

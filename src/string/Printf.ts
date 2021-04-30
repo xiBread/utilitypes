@@ -14,9 +14,15 @@ type Specifier<T> =
 
 /**
  * Constructs a tuple type based on each specifier found in `S`.
+ *
+ * @example
+ * ```ts
+ * type T0 = Printf<'%i + %i = %i'>
+ * //	^ = [number, number, number]
+ * ```
  */
-export type Printf<S extends string> = S extends `${infer $}%${infer T}${infer R}`
+export type Printf<S extends string> = S extends `${infer F}%${infer T}${infer R}`
 	? [Specifier<T>, ...Printf<R>]
-	: S extends `${infer $}%${infer T}`
+	: S extends `${infer F}%${infer T}`
 	? [Specifier<T>]
 	: [];

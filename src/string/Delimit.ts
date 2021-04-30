@@ -17,7 +17,7 @@ type Join<T extends unknown[], U extends string> = T extends [`${infer F}`, ...i
 	: '';
 
 /**
- * Converts a string by delimiting each compound word in `S` by `U`.
+ * Converts each space and compound word in `S` by replacing them with `U`.
  *
  * @example
  * ```ts
