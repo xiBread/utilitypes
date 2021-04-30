@@ -1,7 +1,6 @@
 export * from './Chunk';
 export * from './Filter';
 export * from './Flat';
-export * from './Head';
 export * from './Includes';
 export * from './IndexOf';
 export * from './Initial';
