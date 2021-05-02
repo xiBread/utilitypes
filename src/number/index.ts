@@ -10,6 +10,7 @@ export * from './Compare';
 export * from './GreaterThan';
 export * from './IsNegative';
 export * from './LessThan';
+export * from './Multiply';
 export * from './ParseInt';
 export * from './Range';
 export * from './Sign';
