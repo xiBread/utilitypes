@@ -1,6 +1,6 @@
 {
 	"name": "extended-utility-types",
-	"version": "1.16.0",
+	"version": "2.0.0",
 	"description": "A library of utility types for TypeScript.",
 	"main": "dist/index.js",
 	"typings": "dist/typings/index.d.ts",
