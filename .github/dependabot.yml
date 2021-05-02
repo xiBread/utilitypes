@@ -1,16 +1,9 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "13:00"
-  open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: "@types/node"
-    versions:
-    - 14.14.37
-    - 15.0.0
-  - dependency-name: tslib
-    versions:
-    - 2.2.0
+    - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+        interval: 'daily'
+        time: '19:00'
+        timezone: 'America/Los_Angeles'
+    open-pull-requests-limit: 10
