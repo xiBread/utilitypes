@@ -89,10 +89,12 @@ npm i -D extended-utility-types
 	- [`GreaterThan<X, Y>`](src/number/GreaterThan.ts)
 	- [`IsNegative<N>`](src/number/IsNegative.ts)
 	- [`LessThan<X, Y>`](src/number/LessThan.ts)
+	- [`Multiply<X, Y>`](src/number/Multiply.ts)
 	- [`ParseInt<S>`](src/number/ParseInt.ts)
 	- [`Range<X, Y>`](src/number/Range.ts)
 	- [`Sign<N>`](src/number/Sign.ts)
 	- [`Subtract<X, Y>`](src/number/Subtract.ts)
+	- [`Sum<X, Y>`](src/number/Sum.ts)
 - Object
 	- [`Assign<T, U>`](src/object/Assign.ts)
 	- [`Compact<T>`](src/object/Compact.ts)
@@ -158,7 +160,7 @@ npm i -D extended-utility-types
 [Common]: https://img.shields.io/badge/6-Common-FEDD9E?style=for-the-badge&labelColor=363C44
 [Function]: https://img.shields.io/badge/4-Function-B9E9AA?style=for-the-badge&labelColor=363C44
 [Logical]: https://img.shields.io/badge/8-Logical-B9F9E6?style=for-the-badge&labelColor=363C44
-[Number]: https://img.shields.io/badge/16-Number-B1F1F4?style=for-the-badge&labelColor=363C44
+[Number]: https://img.shields.io/badge/18-Number-B1F1F4?style=for-the-badge&labelColor=363C44
 [Object]: https://img.shields.io/badge/26-Object-88C5FF?style=for-the-badge&labelColor=363C44
 [String]: https://img.shields.io/badge/21-String-C7B4E0?style=for-the-badge&labelColor=363C44
 [Union]: https://img.shields.io/badge/9-Union-F8CEEE?style=for-the-badge&labelColor=363C44
