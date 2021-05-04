@@ -20,5 +20,6 @@ type Separate<T extends readonly unknown[], N extends number, U extends unknown[
  *
  * type T1 = Chunk<typeof numbers, 2>;
  * //	^ = type T1 = [[1, 2], [3, 4], [5, 6], [7, 8], [9]]
+ * ```
  */
 export type Chunk<T extends readonly unknown[], N extends number> = Separate<T, N>;
