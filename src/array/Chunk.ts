@@ -1,4 +1,4 @@
-import type { Slice } from '../';
+import type { Mutable, Slice } from '../';
 
 type Separate<T extends readonly unknown[], N extends number, U extends unknown[] = []> = T extends []
 	? U
@@ -22,4 +22,8 @@ type Separate<T extends readonly unknown[], N extends number, U extends unknown[
  * //	^ = type T1 = [[1, 2], [3, 4], [5, 6], [7, 8], [9]]
  * ```
  */
-export type Chunk<T extends readonly unknown[], N extends number> = Separate<T, N>;
+export type Chunk<T extends readonly unknown[], N extends number> = number extends N
+	? Mutable<T>
+	: N extends 0
+	? Mutable<T>
+	: Separate<T, N>;
