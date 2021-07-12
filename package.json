@@ -22,7 +22,7 @@
 	"author": "Bread <developernamedbread@gmail.com>",
 	"license": " BSD-3-Clause-Clear",
 	"devDependencies": {
-		"@types/node": "^15.0.1",
+		"@types/node": "^16.3.1",
 		"husky": "^6.0.0",
 		"readdirp": "^3.6.0",
 		"tslib": "^2.2.0",
