@@ -90,13 +90,13 @@ const colors = {
 		lines.push(list);
 	}
 
-	keys.map((category) => {
+	for (const category of keys) {
 		const types = categories.get(category);
 
 		refs.push(
 			`[${category}]: https://img.shields.io/badge/${types.length}-${category}-${colors[category]}?style=for-the-badge&labelColor=363C44`
 		);
-	});
+	}
 
 	lines.push(`\n${refs.join('\n')}`);
 
