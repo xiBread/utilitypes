@@ -1,6 +1,6 @@
 {
 	"name": "extended-utility-types",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "A library of utility types for TypeScript.",
 	"main": "dist/index.js",
 	"typings": "dist/typings/index.d.ts",
@@ -22,10 +22,10 @@
 	"author": "Bread <developernamedbread@gmail.com>",
 	"license": " BSD-3-Clause-Clear",
 	"devDependencies": {
-		"@types/node": "^15.0.1",
-		"husky": "^6.0.0",
+		"@types/node": "^16.3.1",
+		"husky": "^7.0.1",
 		"readdirp": "^3.6.0",
-		"tslib": "^2.2.0",
-		"typescript": "^4.2.4"
+		"tslib": "^2.3.0",
+		"typescript": "^4.3.5"
 	}
 }

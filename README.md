@@ -65,6 +65,7 @@ npm i -D extended-utility-types
 - Function
 	- [`AppendParameter<T, U>`](src/function/AppendParameter.ts)
 	- [`FunctionLike<T>`](src/function/FunctionLike.ts)
+	- [`NoInfer<T>`](src/function/NoInfer.ts)
 	- [`Promisable<T>`](src/function/Promisable.ts)
 	- [`PromiseReturnType<T>`](src/function/PromiseReturnType.ts)
 - Logical
@@ -158,7 +159,7 @@ npm i -D extended-utility-types
 [Aliases]: https://img.shields.io/badge/10-Aliases-FF9C9F?style=for-the-badge&labelColor=363C44
 [Array]: https://img.shields.io/badge/18-Array-FEC98F?style=for-the-badge&labelColor=363C44
 [Common]: https://img.shields.io/badge/6-Common-FEDD9E?style=for-the-badge&labelColor=363C44
-[Function]: https://img.shields.io/badge/4-Function-B9E9AA?style=for-the-badge&labelColor=363C44
+[Function]: https://img.shields.io/badge/5-Function-B9E9AA?style=for-the-badge&labelColor=363C44
 [Logical]: https://img.shields.io/badge/8-Logical-B9F9E6?style=for-the-badge&labelColor=363C44
 [Number]: https://img.shields.io/badge/18-Number-B1F1F4?style=for-the-badge&labelColor=363C44
 [Object]: https://img.shields.io/badge/26-Object-88C5FF?style=for-the-badge&labelColor=363C44
