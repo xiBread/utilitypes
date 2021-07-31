@@ -20,13 +20,13 @@ enum BadgeColor {
 	Union = 'F8CEEE'
 }
 
+const repoURL = 'https://github.com/vBread/extended-utility-types/tree/main/src';
+
 (async () => {
 	const categories = new Map<string, [string, string][]>();
-	const dirs = readdirp(`${process.cwd()}/src`, {
-		fileFilter: '[A-Z]*.ts'
-	});
-
 	const files = new Set<string>();
+
+	const dirs = readdirp(`${process.cwd()}/src`, { fileFilter: '[A-Z]*.ts' });
 
 	for await (const file of dirs) {
 		files.add(file.fullPath);
@@ -36,25 +36,25 @@ enum BadgeColor {
 
 	for (const file of program.getSourceFiles()) {
 		if (!file.isDeclarationFile && files.has(file.fileName)) {
-			forEachChild(file, (node: Node) => {
+			forEachChild(file, (node) => {
 				if (isTypeAliasDeclaration(node) && node.modifiers) {
 					const category = basename(dirname(file.fileName));
 					const key = category[0].toUpperCase() + category.slice(1);
 
-					const parsed = parse(file.fileName);
-					const relative = `${parsed.dir.split(`${__dirname}/`)[1]}/${parsed.base}`;
+					const { dir, base } = parse(file.fileName);
+					const link = `${repoURL}/${basename(dir)}/${base}`;
 
-					let typeName = node.name.text;
+					let alias = node.name.text;
+					const params = node.typeParameters;
 
-					if (node.typeParameters) {
-						typeName += `<${node.typeParameters.map(({ name }) => name.escapedText).join(', ')}>`;
+					if (params) {
+						alias += `<${params.map(({ name }) => name.escapedText).join(', ')}>`;
 					}
 
-					let value: [string, string][] = [[typeName, relative]];
+					let value: [string, string][] = [[alias, link]];
 
 					if (categories.has(key)) {
-						value = categories.get(key);
-						value.push([typeName, relative]);
+						value = [...categories.get(key), [alias, link]];
 					}
 
 					categories.set(key, value);
@@ -72,7 +72,9 @@ enum BadgeColor {
 	const [badges, refs]: [string[], string[]] = [[], []];
 	const keys = [...categories.keys()];
 
-	keys.map((category) => void badges.push(`[![${category}]](src/${category.toLowerCase()})`));
+	for (const category of keys) {
+		badges.push(`[![${category}]](${repoURL}/${category.toLowerCase()})`);
+	}
 
 	const template = lines.findIndex((line) => line === '{{badges}}');
 	lines.splice(template, 1, badges.join('\n'));
