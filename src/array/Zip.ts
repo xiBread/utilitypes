@@ -1,4 +1,5 @@
-import type { ExtendSelf, Push } from '../';
+import type { Push } from '../';
+import type { ExtendSelf } from '../internal';
 
 type Populate<T extends readonly [unknown[], unknown[]], U extends unknown[]> = T extends readonly [
 	[infer A, ...infer B],

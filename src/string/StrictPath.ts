@@ -1,4 +1,4 @@
-import type { ExtendSelf } from '../';
+import type { ExtendSelf } from '../internal';
 
 type PathString<T, K extends keyof T> = K extends string
 	? T[K] extends Record<string, any>

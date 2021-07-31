@@ -1,4 +1,4 @@
-import type { ExtendSelf } from '../';
+import type { ExtendSelf } from '../internal';
 
 type Or<X, Y> = [X, Y] extends ['0', '0']
 	? '0'
