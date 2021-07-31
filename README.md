@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD007 MD033 -->
+
 # Extended Utility Types
 
 A library with over 100 utility types to empower TypeScript development.
@@ -15,8 +17,8 @@ npm i -D extended-utility-types
 
 [![Aliases]](src/aliases)
 [![Array]](src/array)
-[![Common]](src/common)
 [![Function]](src/function)
+[![General]](src/general)
 [![Logical]](src/logical)
 [![Number]](src/number)
 [![Object]](src/object)
@@ -55,19 +57,19 @@ npm i -D extended-utility-types
 	- [`Unshift<T, U>`](src/array/Unshift.ts)
 	- [`Unzip<T>`](src/array/Unzip.ts)
 	- [`Zip<T>`](src/array/Zip.ts)
-- Common
-	- [`CastAs<T, U>`](src/common/CastAs.ts)
-	- [`IsEqual<X, Y>`](src/common/IsEqual.ts)
-	- [`IsAny<T>`](src/common/IsAny.ts)
-	- [`IsNever<T>`](src/common/IsNever.ts)
-	- [`IsTuple<T>`](src/common/IsTuple.ts)
-	- [`Opaque<T, U>`](src/common/Opaque.ts)
 - Function
 	- [`AppendParameter<T, U>`](src/function/AppendParameter.ts)
 	- [`FunctionLike<T>`](src/function/FunctionLike.ts)
 	- [`NoInfer<T>`](src/function/NoInfer.ts)
 	- [`Promisable<T>`](src/function/Promisable.ts)
 	- [`PromiseReturnType<T>`](src/function/PromiseReturnType.ts)
+- General
+	- [`CastAs<T, U>`](src/general/CastAs.ts)
+	- [`IsEqual<X, Y>`](src/general/IsEqual.ts)
+	- [`IsAny<T>`](src/general/IsAny.ts)
+	- [`IsNever<T>`](src/general/IsNever.ts)
+	- [`IsTuple<T>`](src/general/IsTuple.ts)
+	- [`Opaque<T, U>`](src/general/Opaque.ts)
 - Logical
 	- [`And<X, Y>`](src/logical/And.ts)
 	- [`If<T, X, Y>`](src/logical/If.ts)
@@ -158,8 +160,8 @@ npm i -D extended-utility-types
 
 [Aliases]: https://img.shields.io/badge/10-Aliases-FF9C9F?style=for-the-badge&labelColor=363C44
 [Array]: https://img.shields.io/badge/18-Array-FEC98F?style=for-the-badge&labelColor=363C44
-[Common]: https://img.shields.io/badge/6-Common-FEDD9E?style=for-the-badge&labelColor=363C44
 [Function]: https://img.shields.io/badge/5-Function-B9E9AA?style=for-the-badge&labelColor=363C44
+[General]: https://img.shields.io/badge/6-General-FEDD9E?style=for-the-badge&labelColor=363C44
 [Logical]: https://img.shields.io/badge/8-Logical-B9F9E6?style=for-the-badge&labelColor=363C44
 [Number]: https://img.shields.io/badge/18-Number-B1F1F4?style=for-the-badge&labelColor=363C44
 [Object]: https://img.shields.io/badge/26-Object-88C5FF?style=for-the-badge&labelColor=363C44

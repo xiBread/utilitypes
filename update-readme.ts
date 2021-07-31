@@ -8,17 +8,17 @@ import {
 	Node,
 } from 'typescript';
 
-const colors = {
-	Aliases: 'FF9C9F',
-	Array: 'FEC98F',
-	Common: 'FEDD9E',
-	Function: 'B9E9AA',
-	Logical: 'B9F9E6',
-	Number: 'B1F1F4',
-	Object: '88C5FF',
-	String: 'C7B4E0',
-	Union: 'F8CEEE'
-};
+enum BadgeColor {
+	Aliases = 'FF9C9F',
+	Array = 'FEC98F',
+	Function = 'B9E9AA',
+	General = 'FEDD9E',
+	Logical = 'B9F9E6',
+	Number = 'B1F1F4',
+	Object = '88C5FF',
+	String = 'C7B4E0',
+	Union = 'F8CEEE'
+}
 
 (async () => {
 	const categories = new Map<string, [string, string][]>();
@@ -94,7 +94,7 @@ const colors = {
 		const types = categories.get(category);
 
 		refs.push(
-			`[${category}]: https://img.shields.io/badge/${types.length}-${category}-${colors[category]}?style=for-the-badge&labelColor=363C44`
+			`[${category}]: https://img.shields.io/badge/${types.length}-${category}-${BadgeColor[category]}?style=for-the-badge&labelColor=363C44`
 		);
 	}
 
