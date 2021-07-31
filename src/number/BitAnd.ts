@@ -1,4 +1,4 @@
-import type { ExtendSelf } from '../';
+import type { ExtendSelf } from '../internal';
 
 type And<X, Y> = [X, Y] extends ['0', '0'] | ['0', '1'] | ['1', '0']
 	? '0'

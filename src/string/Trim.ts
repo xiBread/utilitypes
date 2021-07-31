@@ -1,4 +1,5 @@
-import type { ExtendSelf, TrimEnd, TrimStart } from '../';
+import type { TrimEnd, TrimStart } from '../';
+import type { ExtendSelf } from '../internal';
 
 /**
  * Removes whitespace from both ends of `S`.

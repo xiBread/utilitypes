@@ -7,8 +7,3 @@ export * from './number';
 export * from './object';
 export * from './string';
 export * from './union';
-
-/**
- * @internal
- */
-export type ExtendSelf<T, U> = T extends T ? U : never;
