@@ -1,4 +1,5 @@
 import type { Tuple } from '../';
+import type { Indexable } from '../internal';
 
 type Split<
 	S extends string,
@@ -10,12 +11,15 @@ type Split<
 	: T;
 
 /**
- * Returns the length of `S`.
+ * Returns the length of `T`.
  *
  * @example
  * ```ts
  * type T0 = Length<'Lorem ipsum'>;
  * //	^ = type T0 = 11
+ *
+ * type T1 = Length<[1, 2, 3, 4, 5]>;
+ * //	^ = type T1 = 5
  * ```
  */
-export type Length<S extends string> = Split<S>['length'];
+export type Length<T extends Indexable> = T extends string ? Split<T>['length'] : T['length'];

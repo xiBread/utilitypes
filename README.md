@@ -50,7 +50,6 @@ npm i -D extended-utility-types
 	- [`Push<T, U>`](https://github.com/vBread/extended-utility-types/tree/main/src/array/Push.ts)
 	- [`Reverse<T>`](https://github.com/vBread/extended-utility-types/tree/main/src/array/Reverse.ts)
 	- [`Shift<T>`](https://github.com/vBread/extended-utility-types/tree/main/src/array/Shift.ts)
-	- [`Slice<T, X, Y>`](https://github.com/vBread/extended-utility-types/tree/main/src/array/Slice.ts)
 	- [`Tail<T>`](https://github.com/vBread/extended-utility-types/tree/main/src/array/Tail.ts)
 	- [`Tuple<T, N>`](https://github.com/vBread/extended-utility-types/tree/main/src/array/Tuple.ts)
 	- [`TupleOf<T>`](https://github.com/vBread/extended-utility-types/tree/main/src/array/TupleOf.ts)
@@ -69,7 +68,9 @@ npm i -D extended-utility-types
 	- [`IsAny<T>`](https://github.com/vBread/extended-utility-types/tree/main/src/general/IsAny.ts)
 	- [`IsNever<T>`](https://github.com/vBread/extended-utility-types/tree/main/src/general/IsNever.ts)
 	- [`IsTuple<T>`](https://github.com/vBread/extended-utility-types/tree/main/src/general/IsTuple.ts)
+	- [`Length<T>`](https://github.com/vBread/extended-utility-types/tree/main/src/general/Length.ts)
 	- [`Opaque<T, U>`](https://github.com/vBread/extended-utility-types/tree/main/src/general/Opaque.ts)
+	- [`Slice<T, X, Y>`](https://github.com/vBread/extended-utility-types/tree/main/src/general/Slice.ts)
 - Logical
 	- [`And<X, Y>`](https://github.com/vBread/extended-utility-types/tree/main/src/logical/And.ts)
 	- [`If<T, X, Y>`](https://github.com/vBread/extended-utility-types/tree/main/src/logical/If.ts)
@@ -130,7 +131,6 @@ npm i -D extended-utility-types
 	- [`ConstantCase<S>`](https://github.com/vBread/extended-utility-types/tree/main/src/string/ConstantCase.ts)
 	- [`Delimit<S, U>`](https://github.com/vBread/extended-utility-types/tree/main/src/string/Delimit.ts)
 	- [`Get<T, P>`](https://github.com/vBread/extended-utility-types/tree/main/src/string/Get.ts)
-	- [`Length<S>`](https://github.com/vBread/extended-utility-types/tree/main/src/string/Length.ts)
 	- [`PadEnd<S, N, T>`](https://github.com/vBread/extended-utility-types/tree/main/src/string/PadEnd.ts)
 	- [`PadStart<S, N, T>`](https://github.com/vBread/extended-utility-types/tree/main/src/string/PadStart.ts)
 	- [`PascalCase<S>`](https://github.com/vBread/extended-utility-types/tree/main/src/string/PascalCase.ts)
@@ -140,7 +140,6 @@ npm i -D extended-utility-types
 	- [`Repeat<S, N>`](https://github.com/vBread/extended-utility-types/tree/main/src/string/Repeat.ts)
 	- [`Replace<S, T, U>`](https://github.com/vBread/extended-utility-types/tree/main/src/string/Replace.ts)
 	- [`ReplaceAll<S, T, U>`](https://github.com/vBread/extended-utility-types/tree/main/src/string/ReplaceAll.ts)
-	- [`SliceString<S, X, Y>`](https://github.com/vBread/extended-utility-types/tree/main/src/string/SliceString.ts)
 	- [`Split<S, U>`](https://github.com/vBread/extended-utility-types/tree/main/src/string/Split.ts)
 	- [`SplitWith<S, U>`](https://github.com/vBread/extended-utility-types/tree/main/src/string/SplitWith.ts)
 	- [`StrictPath<T>`](https://github.com/vBread/extended-utility-types/tree/main/src/string/StrictPath.ts)
@@ -159,11 +158,11 @@ npm i -D extended-utility-types
 	- [`Distribute<T>`](https://github.com/vBread/extended-utility-types/tree/main/src/union/Distribute.ts)
 
 [Aliases]: https://img.shields.io/badge/10-Aliases-FF9C9F?style=for-the-badge&labelColor=363C44
-[Array]: https://img.shields.io/badge/18-Array-FEC98F?style=for-the-badge&labelColor=363C44
+[Array]: https://img.shields.io/badge/17-Array-FEC98F?style=for-the-badge&labelColor=363C44
 [Function]: https://img.shields.io/badge/5-Function-B9E9AA?style=for-the-badge&labelColor=363C44
-[General]: https://img.shields.io/badge/6-General-FEDD9E?style=for-the-badge&labelColor=363C44
+[General]: https://img.shields.io/badge/8-General-FEDD9E?style=for-the-badge&labelColor=363C44
 [Logical]: https://img.shields.io/badge/8-Logical-B9F9E6?style=for-the-badge&labelColor=363C44
 [Number]: https://img.shields.io/badge/18-Number-B1F1F4?style=for-the-badge&labelColor=363C44
 [Object]: https://img.shields.io/badge/26-Object-88C5FF?style=for-the-badge&labelColor=363C44
-[String]: https://img.shields.io/badge/21-String-C7B4E0?style=for-the-badge&labelColor=363C44
+[String]: https://img.shields.io/badge/19-String-C7B4E0?style=for-the-badge&labelColor=363C44
 [Union]: https://img.shields.io/badge/9-Union-F8CEEE?style=for-the-badge&labelColor=363C44
