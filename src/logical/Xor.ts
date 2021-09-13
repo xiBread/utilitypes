@@ -1,7 +1,7 @@
 import type { Operands } from '../';
 
 /**
- * Returns `true` if and only if `X` and `Y` differ from each other; otherwise, `false`.
+ * Returns `true` if and only if `A` and `B` differ from each other; otherwise, `false`.
  *
  * @example
  * ```ts
@@ -12,8 +12,8 @@ import type { Operands } from '../';
  * //	^ = type T1 = false
  * ```
  */
-export type Xor<X extends boolean, Y extends boolean> = [X, Y] extends Operands[0 | 3]
+export type XOR<A extends boolean, B extends boolean> = [A, B] extends Operands[0 | 3]
 	? false
-	: [X, Y] extends Operands[1 | 2]
+	: [A, B] extends Operands[1 | 2]
 	? true
 	: never;

@@ -1,15 +1,15 @@
-import type { Not, Or } from '../';
+import type { NOT, OR } from '../';
 
 /**
- * Returns `true` if and only if `X` and `Y` are `false`; otherwise, `false`.
+ * Returns `true` if and only if `A` and `B` are `false`; otherwise, `false`.
  *
  * @example
  * ```ts
- * type T0 = Nor<false, true>;
+ * type T0 = NOR<false, true>;
  * //	^ = type T0 = false
  *
- * type T1 = Nor<false, false>
+ * type T1 = NOR<false, false>
  * //	^ type T1 = true
  * ```
  */
-export type Nor<X extends boolean, Y extends boolean> = Not<Or<X, Y>>;
+export type NOR<A extends boolean, B extends boolean> = NOT<OR<A, B>>;

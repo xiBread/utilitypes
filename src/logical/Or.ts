@@ -1,19 +1,19 @@
 import type { Operands, Tail } from '../';
 
 /**
- * Returns `true` if and only if either `X` or `Y`, or both, are `true`; otherwise, `false`.
+ * Returns `true` if and only if either `A` or `B`, or both, are `true`; otherwise, `false`.
  *
  * @example
  * ```ts
- * type T0 = Or<false, true>;
+ * type T0 = OR<false, true>;
  * //	^ = type T0 = true
  *
- * type T1 = Or<false, false>
+ * type T1 = OR<false, false>
  * //	^ type T1 = false
  * ```
  */
-export type Or<X extends boolean, Y extends boolean> = [X, Y] extends Operands[0]
+export type OR<A extends boolean, B extends boolean> = [A, B] extends Operands[0]
 	? false
-	: [X, Y] extends Tail<Operands>[number]
+	: [A, B] extends Tail<Operands>[number]
 	? true
 	: never;
