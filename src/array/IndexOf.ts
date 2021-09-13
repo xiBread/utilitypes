@@ -1,8 +1,4 @@
-import type { CastAs, Invert, ParseInt, Range, RecordOf, TupleOf } from '../';
-
-type MapArray<T extends readonly unknown[], N extends number> = Invert<
-	Omit<RecordOf<T>, N extends 0 ? '' : number extends N ? '' : `${Range<0, N>}`>
->;
+import type { Add } from '../';
 
 /**
  * Returns the first index of `U` in `T` or `-1` if it's not present.
@@ -21,8 +17,8 @@ type MapArray<T extends readonly unknown[], N extends number> = Invert<
  * //	^ = type T2 = -1
  * ```
  */
-export type IndexOf<T extends readonly unknown[], U, N extends number = 0> = MapArray<T, N> extends infer K
-	? U extends keyof K
-		? ParseInt<CastAs<TupleOf<K[U]>[0], `${number}`>>
-		: -1
-	: never;
+export type IndexOf<T extends readonly unknown[], U, N extends number = 0> = T extends readonly [infer F, ...infer R]
+	? U extends F
+		? N
+		: IndexOf<R, U, Add<N, 1>>
+	: -1;
