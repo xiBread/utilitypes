@@ -1,7 +1,7 @@
-import type { Not, Xor } from '../';
+import type { NOT, XOR } from '../';
 
 /**
- * Returns `true` if and only if `X` and `Y` are both either `false` or `true`.
+ * Returns `true` if and only if `A` and `B` are both either `false` or `true`.
  *
  * @example
  * ```ts
@@ -12,4 +12,4 @@ import type { Not, Xor } from '../';
  * //	^ = type T1 = true
  * ```
  */
-export type Xnor<X extends boolean, Y extends boolean> = Not<Xor<X, Y>>;
+export type XNOT<A extends boolean, B extends boolean> = NOT<XOR<A, B>>;

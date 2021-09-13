@@ -3,11 +3,11 @@
  *
  * @example
  * ```ts
- * type T0 = Not<false>;
+ * type T0 = NOT<false>;
  * //	^ = type T0 = true
  *
- * type T1 = Not<true>;
+ * type T1 = NOT<true>;
  * //	^ = type T1 = false
  * ```
  */
-export type Not<T extends boolean> = T extends true ? false : true;
+export type NOT<T extends boolean> = T extends true ? false : true;

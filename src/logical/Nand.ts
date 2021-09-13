@@ -1,15 +1,15 @@
-import type { And, Not } from '../';
+import type { AND, NOT } from '../';
 
 /**
- * Returns `true` if and only if `X` and `Y` are not both `true`; otherwise `false`.
+ * Returns `true` if and only if `A` and `B` are not both `true`; otherwise `false`.
  *
  * @example
  * ```ts
- * type T0 = Nand<false, true>;
+ * type T0 = NAND<false, true>;
  * //	^ = type T0 = true
  *
- * type T1 = Nand<true, true>;
+ * type T1 = NAND<true, true>;
  * //	^ = type T1 = false
  * ```
  */
-export type Nand<X extends boolean, Y extends boolean> = Not<And<X, Y>>;
+export type NAND<A extends boolean, B extends boolean> = NOT<AND<A, B>>;
