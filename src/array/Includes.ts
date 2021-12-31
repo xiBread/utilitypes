@@ -1,3 +1,5 @@
+import type { IsEqual } from "../";
+
 /**
  * Returns `true` if `U` is included in `T`; otherwise, `false`.
  *
@@ -13,7 +15,7 @@
  * ```
  */
 export type Includes<T extends readonly unknown[], U> = T extends readonly [infer F, ...infer R]
-	? F extends U
+	? IsEqual<F, U> extends true
 		? true
 		: Includes<R, U>
 	: false;
