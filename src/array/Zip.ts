@@ -1,24 +1,18 @@
-import type { Push } from '../';
-import type { ExtendSelf } from '../internal';
-
-type Populate<T extends readonly [unknown[], unknown[]], U extends unknown[]> = T extends readonly [
-	[infer A, ...infer B],
-	[infer X, ...infer Y]
-]
-	? Populate<[B, Y], Push<U, [[A, X]]>>
-	: U;
-
 /**
  * Constructs an array type whose elements are tuples containing a pair of elements from `T`
  * occuring at the same index.
  *
  * @example
  * ```ts
- * type T0 = Zip<[[1, 2, 3], ['a', 'b', 'c']]>;
+ * type T0 = Zip<[1, 2, 3], ['a', 'b', 'c']>;
  * //	^ = type T0 = [[1, "a"], [2, "b"], [3, "c"]]
  *
- * type T1 = Zip<[[1, 2, 3, 4, 5], [9, 8]]>;
+ * type T1 = Zip<[1, 2, 3, 4, 5], [9, 8]>;
  * //	^ = type T1 = [[1, 9], [2, 8]]
  * ```
  */
-export type Zip<T extends readonly [unknown[], unknown[]]> = ExtendSelf<T, Populate<T, []>>;
+export type Zip<A extends readonly unknown[], B extends readonly unknown[]> = A extends readonly [infer A1, ...infer A2]
+	? B extends readonly [infer B1, ...infer B2]
+		? [[A1, B1], ...Zip<A2, B2>]
+		: []
+	: [];
