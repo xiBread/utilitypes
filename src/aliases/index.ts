@@ -1,4 +1,4 @@
-export * from "./LiteralPrimitive";
+export * from "./Literal";
 export * from "./LowercaseCharacter";
 export * from "./Maybe";
 export * from "./NumberLike";
