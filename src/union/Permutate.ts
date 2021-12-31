@@ -1,4 +1,6 @@
-type Permutation<T, K = T> = [T] extends [never] ? [] : K extends K ? [K, ...Permutation<Exclude<T, K>>] : never;
+interface Permutation<T, K = T> {
+	0: [T] extends [never] ? [] : K extends K ? [K, ...Permutation<Exclude<T, K>>[0]] : never;
+}
 
 /**
  * Constructs a union type of tuples with each possible variant of how `T` can be arranged.
