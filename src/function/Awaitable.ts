@@ -1,1 +1,1 @@
-export type Awaitable<T = unknown> = T | Promise<T> | PromiseLike<T>;
+export type Awaitable<T = unknown> = Promise<T> | PromiseLike<T>;
