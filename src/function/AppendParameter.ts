@@ -1,3 +1,5 @@
+import type { FunctionLike } from "./";
+
 /**
  * Constructs a function type by appending `U` to the parameters of `T`.
  *
@@ -7,6 +9,6 @@
  * //	^ = type T0 = (x: number, y: number) => number
  * ```
  */
-export type AppendParameter<T, U extends unknown[]> = T extends (...args: any[]) => unknown
-	? (...args: [...Parameters<T>, ...U]) => ReturnType<T>
-	: never;
+export type AppendParameter<T extends FunctionLike, U extends unknown[]> = (
+	...args: [...Parameters<T>, ...U]
+) => ReturnType<T>;
