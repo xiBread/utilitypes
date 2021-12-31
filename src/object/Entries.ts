@@ -1,4 +1,4 @@
-import type { RecordOf, TupleOf, Zip } from '../';
+import type { RecordOf, TupleOf, Zip } from "../";
 
 /**
  * Constructs an array type whose entries are key-value pairs from `T`.
@@ -15,5 +15,5 @@ import type { RecordOf, TupleOf, Zip } from '../';
 export type Entries<T> = T extends readonly unknown[]
 	? Entries<RecordOf<T>>
 	: T extends Record<infer K, infer V>
-	? Zip<[TupleOf<K>, TupleOf<V>]>
+	? Zip<TupleOf<K>, TupleOf<V>>
 	: [];
