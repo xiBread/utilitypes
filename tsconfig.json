@@ -2,10 +2,9 @@
 	"compilerOptions": {
 		"outDir": "dist",
 		"declaration": true,
-		"declarationDir": "dist/typings",
 		"moduleResolution": "node",
-		"esModuleInterop": true,
 		"module": "CommonJS",
+		"strict": true,
 		"target": "ESNext",
 		"lib": [
 			"ESNext"
@@ -15,6 +14,6 @@
 		"node_modules"
 	],
 	"include": [
-		"src/**/*"
+		"src/**/*.ts"
 	]
 }
