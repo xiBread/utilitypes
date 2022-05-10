@@ -23,7 +23,7 @@
 	"license": " BSD-3-Clause-Clear",
 	"devDependencies": {
 		"@types/node": "^16.4.8",
-		"husky": "^7.0.1",
+		"husky": "^8.0.1",
 		"readdirp": "^3.6.0",
 		"tslib": "^2.3.0",
 		"typescript": "^4.3.5"
