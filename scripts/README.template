@@ -1,0 +1,15 @@
+# UtiliTypes
+
+A library with over 100 utility types to empower TypeScript development.
+
+## Installation
+
+> *Requires TypeScript >= 5.0*
+
+```sh
+npm i -D utilitypes
+```
+
+## Types
+
+{types}
