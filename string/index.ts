@@ -44,7 +44,12 @@ export type PadStart<
 /**
  *
  */
-export type Repeat<S extends string, N extends number> = Join<Tuple<S, N>, "">;
+export type Repeat<S extends string, N extends number> = Tuple<
+	S,
+	N
+> extends infer U extends unknown[]
+	? Join<U, "">
+	: never;
 
 /**
  *
