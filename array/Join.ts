@@ -3,8 +3,8 @@ import type { Flat } from "./Flat";
 
 type Stringify<T> = (T extends undefined | null ? (T & {}) | "" : T) extends infer U extends literal
 	? `${U}`
-	: T extends object
-	? "[object Object]"
+	: T extends { [Symbol.toStringTag]: infer S extends string }
+	? `[object ${string extends S ? "Object" : S}]`
 	: never;
 
 /**
