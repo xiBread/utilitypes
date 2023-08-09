@@ -1,5 +1,5 @@
-import { Reverse } from "../array";
-import { Multiply, Range } from "./";
+import type { Reverse } from "../array";
+import type { Multiply, Range } from "./";
 
 type $<T extends number[], M extends number = 1> = T extends [
 	infer F extends number,
