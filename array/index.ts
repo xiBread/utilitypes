@@ -106,6 +106,7 @@ export type Reject<T extends unknown[], U> = T extends [infer F, ...infer R]
  *
  * out:
  * type T = [3, 2, 1];
+ * ```
  */
 export type Reverse<T extends unknown[]> = T extends [infer F, ...infer R]
 	? [...Reverse<R>, F]

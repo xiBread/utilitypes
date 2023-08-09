@@ -1,4 +1,4 @@
-import { Index } from "../internal";
+import type { Index } from "../internal";
 
 type $<T, A, B, U extends 0[] = [], S extends unknown[] = []> = U["length"] extends B
 	? S

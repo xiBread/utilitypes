@@ -1,3 +1,6 @@
+export type * from "./Distribute";
+export type * from "./Permutate";
+
 /**
  * @example
  * ```ts

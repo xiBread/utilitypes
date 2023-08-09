@@ -1,5 +1,5 @@
 import type * as Math from "ts-arithmetic";
-import type { If, Not, Or } from "../boolean";
+import type { If, Not } from "../boolean";
 import type { Range } from "./Range";
 
 export type * from "./extremum";
