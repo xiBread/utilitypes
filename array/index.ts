@@ -84,6 +84,11 @@ export type Unshift<T extends unknown[], U extends unknown[]> = [...U, ...T];
 /**
  *
  */
+export type ArrayType<T extends unknown[]> = T extends (infer U)[] ? U : never;
+
+/**
+ *
+ */
 export type Partition<T extends unknown[], U> = [Filter<T, U>, Reject<T, U>];
 
 /**
