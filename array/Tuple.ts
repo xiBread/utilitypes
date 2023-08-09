@@ -1,16 +1,15 @@
+import type { Extends, Or } from "../boolean";
 import type { IsNegative } from "../number";
 
-type Populate<T extends never[][], N extends number> = T[0][N] extends never
-	? T
-	: Populate<[[...T[0], ...T[0]], ...T], N>;
+type Spread<T extends unknown[]> = [...T, ...T, ...T, ...T, ...T, ...T, ...T, ...T, ...T, ...T];
 
-type Extract<N extends number, T extends never[][], U extends never[]> = U["length"] extends N
+type Child<T, N extends string, U extends T[] = []> = `${N}` extends `${U["length"]}`
 	? U
-	: [...T[0], ...U][N] extends never
-	? Extract<N, T extends [T[0], ...infer R extends never[][]] ? R : never, U>
-	: Extract<N, T extends [T[0], ...infer R extends never[][]] ? R : never, [...T[0], ...U]>;
+	: Child<T, N, [T, ...U]>;
 
-type Replace<T, U> = { [K in keyof T]: U };
+type Populate<T, N extends string, U extends unknown[] = []> = `${N}` extends `${infer F}${infer R}`
+	? Populate<T, R, [...Child<T, F>, ...Spread<U>]>
+	: U;
 
 /**
  * Creates an array of {@link T} with a length of {@link N}.
@@ -27,12 +26,6 @@ type Replace<T, U> = { [K in keyof T]: U };
  * type T = [string, string, string];
  * ```
  */
-export type Tuple<T, N extends number> = number extends N
+export type Tuple<T, N extends number> = Or<Extends<number, N>, IsNegative<N>> extends true
 	? T[]
-	: IsNegative<N> extends true
-	? never
-	: Populate<[[never]], N> extends infer U
-	? U extends never[][]
-		? Replace<Extract<N, U, []>, T>
-		: never
-	: never;
+	: Populate<T, `${N}`>;
