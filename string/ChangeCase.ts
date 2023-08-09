@@ -1,6 +1,6 @@
-import { Join } from "../array";
-import { ReplaceAll } from "./";
-import { Split } from "./Split";
+import type { Join } from "../array";
+import type { ReplaceAll } from "./";
+import type { Split } from "./Split";
 
 export type CaseType = keyof CaseMap<string>;
 
