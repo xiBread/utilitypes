@@ -36,6 +36,4 @@ type $<T, N = 1, U extends 0[] = []> = U["length"] extends N
  * type T = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
  * ```
  */
-export type Flat<T extends unknown[], N extends number = 1> = N extends number
-	? $<T, number extends N ? 99 : N>
-	: never;
+export type Flat<T extends unknown[], N extends number = 1> = $<T, number extends N ? 99 : N>;
