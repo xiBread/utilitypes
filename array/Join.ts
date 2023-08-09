@@ -1,11 +1,5 @@
-import type { literal } from "../";
+import type { ToString } from "../object";
 import type { Flat } from "./Flat";
-
-type Stringify<T> = (T extends undefined | null ? (T & {}) | "" : T) extends infer U extends literal
-	? `${U}`
-	: T extends { [Symbol.toStringTag]: infer S extends string }
-	? `[object ${string extends S ? "Object" : S}]`
-	: never;
 
 /**
  *
@@ -14,8 +8,8 @@ export type Join<T extends unknown[], S extends string = ","> = Flat<T> extends 
 	? U extends []
 		? ""
 		: U extends [infer F]
-		? `${Stringify<F>}`
+		? `${ToString<F>}`
 		: U extends [infer F, ...infer R]
-		? `${Stringify<F>}${S}${Join<R, S>}`
+		? `${ToString<F>}${S}${Join<R, S>}`
 		: never
 	: never;
