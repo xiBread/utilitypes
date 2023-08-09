@@ -25,8 +25,8 @@ type $<T, A, B, U extends 0[] = [], S extends unknown[] = []> = U["length"] exte
  * type T = [3, 4];
  * ```
  */
-export type Slice<
-	T extends unknown[],
-	A extends number = 0,
-	B extends number = T["length"]
-> = T extends unknown[] ? $<T, Index<T, A>, Index<T, B>> : never;
+export type Slice<T extends unknown[], A extends number = 0, B extends number = T["length"]> = $<
+	T,
+	Index<T, A>,
+	Index<T, B>
+>;
