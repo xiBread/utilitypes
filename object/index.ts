@@ -1,3 +1,5 @@
+import type { literal } from "../";
+import type { Join } from "../array";
 import type { Path } from "./Path";
 
 export type * from "./Entries";
@@ -33,8 +35,6 @@ export type Assign<T, U extends unknown[]> = U extends [infer F, ...infer R]
 	  >
 	: T;
 
-// export type Entries<T> =
-
 /**
  * @example
  * ```ts
@@ -51,6 +51,16 @@ export type Assign<T, U extends unknown[]> = U extends [infer F, ...infer R]
 export type FromEntries<T extends [PropertyKey, unknown][]> = {
 	[U in T[number] as U[0]]: U[1];
 };
+
+export type ToString<T> = (
+	T extends undefined | null ? (T & {}) | "" : T
+) extends infer U extends literal
+	? `${U}`
+	: T extends unknown[]
+	? Join<T>
+	: T extends { [Symbol.toStringTag]: infer S extends string }
+	? `[object ${string extends S ? "Object" : S}]`
+	: never;
 
 // Utility
 
