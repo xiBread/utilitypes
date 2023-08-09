@@ -1,6 +1,5 @@
-import type { Join, Slice as ArraySlice, Tuple } from "../array";
+import type { IndexOf as ArrayIndexOf, Join, Slice as ArraySlice, Tuple } from "../array";
 import type { Index } from "../internal";
-import type { Compare } from "../number";
 import type { Length } from "./Length";
 import type { Split } from "./Split";
 
@@ -13,6 +12,11 @@ export * from "./Split";
  *
  */
 export type At<T extends string, N extends number> = T[Index<Split<T, "">, N>];
+
+/**
+ *
+ */
+export type IndexOf<S extends string, N extends number> = ArrayIndexOf<Split<S, "">, N>;
 
 /**
  *
