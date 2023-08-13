@@ -62,7 +62,7 @@ for (const [category, types] of Object.entries(categories)) {
 	replacement += "<details>\n";
 	replacement += `<summary>${displayCategory} (${types.length})</summary>\n\n`;
 
-	for (const [name, link] of types) {
+	for (const [name, link] of types.sort()) {
 		replacement += `- [\`${name}\`](${link})\n`;
 	}
 
@@ -70,4 +70,4 @@ for (const [category, types] of Object.entries(categories)) {
 }
 
 const template = await fs.readFile("scripts/README.template", "utf-8");
-await fs.writeFile("README", template.replace("{types}", replacement.trim()));
+await fs.writeFile("README.md", template.replace("{types}", replacement.trim()));
